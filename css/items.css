@@ -1,0 +1,572 @@
+@CHARSET "utf-8";
+/*==凡庸スタイル===================================*/
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/*color*/
+.red{color: #e74c3c;}
+.orange{ color: #e67e22;}
+.slategray{ color: #95a5a6;}
+.white{ color: white;}
+/*-----*/
+
+/*fontsize*/
+.f_36{ font-size: 36px;}
+.f_24{ font-size: 24px;}
+.f_20{ font-size: 20px;}
+.f_18{ font-size: 18px;}
+.f_14{ font-size: 14px;}
+.f_16{ font-size: 16px;}
+.f_small{ font-size: small;}
+/*-----*/
+
+/*textalign*/
+.ta_center{ text-align: center;}
+.ta_left{ text-align: left;}
+.ta_right{ text-align: right;}
+/*----------*/
+
+/*padding*/
+.vp_6{ padding-top: 6px; padding-bottom: 6px;}
+.vp_12{ padding-top: 12px; padding-bottom: 12px;}
+.vp_24{ padding-top: 24px; padding-bottom: 24px;}
+.vp_48{ padding-top: 48px; padding-bottom: 48px;}
+.hp_6{ padding-left: 6px; padding-right: 6px;}
+.hp_12{ padding-left: 12px; padding-right: 12px;}
+.hp_24{ padding-left: 24px; padding-right: 24px;}
+.hp_48{ padding-left: 48px; padding-right: 48px;}
+/*------------*/
+
+/*input.narrow*/
+input.narrow_1{
+	width: 28px;
+}
+input.narrow_2{
+	width: 48px;
+}
+input.narrow_3{
+	width: 96px;
+}
+/*--------------*/
+/*===========================================*/
+/*--レスポンシブアイテム（画面幅に合わせてサイズチェンジする）--------------------
+/*--包括エリア--*/
+.responsive_area_orthodox{
+	margin: auto;
+}
+
+/*--フロートボックス--*/
+.left_box{}
+.right_box{}
+@MEDIA screen and (min-width:480px)  {
+	.left_box.on480{ float: left;}
+	.right_box.on480{ float: right;}
+}
+@MEDIA screen and (min-width:768px)  {
+	.responsive_area_orthodox{
+		width: 768px;
+	}
+
+	.left_box.on768{ float: left;}
+	.right_box.on768{ float: right;}
+}
+@MEDIA screen and (min-width:1024px)  {
+	.responsive_area_orthodox{
+		width: 1024px;
+	}
+
+	.left_box.on1024{ float: left;}
+	.right_box.on1024{ float: right;}
+}
+/*-------------------------------------*/
+
+/*--background-imageを目一杯広げて表示する---------*/
+.bg_full{
+	background-size: cover;
+    background-position: center center;
+}
+/*----------------------------------------------*/
+
+/*--テキストの後に設置するリンク----------------------*/
+a.inline_help_link{
+	display: inline-block;
+	font-size: 12px;
+	color: white;
+	margin-left: 4px;
+	background-color: #aaa;
+	width: 16px;
+	height: 16px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	text-align: center;
+}
+/*---------------------------------------------*/
+
+/*-----centerbox----------------------
+*横軸中央配置のボックス
+-------------------------------------*/
+.center_box{
+	width: 256px;
+	margin: auto;
+
+	position: relative; top: 48px;
+	padding:10px;
+}
+/*------------------------------------*/
+
+/*-----description_box----------------------
+*説明文を表示するボックス
+-------------------------------------*/
+.description_box01{
+	border: 1px dashed #5cb4a4;
+	color: #5cb4a4;
+	font-size: 12px;
+	padding: 2px;
+}
+/*------------------------------------*/
+
+/*--画面内通知領域---------------------*/
+.posting_area{
+	padding: 6px;
+	display: none;
+	background-color: #f2f2f2;
+	font-size: 14px;
+}
+.posting_area:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/*------------------------------------*/
+
+/*--アイテムBOX-----------------------------*/
+.item_box{
+	padding: 12px 0;
+}
+/*------------------------------------------*/
+
+.hide{
+	display: none;
+}
+
+/*------heading---------------------
+*見出し
+------------------------------------*/
+.heading01{
+	font-weight: normal;
+	border-left: 6px solid #f39c12;
+	border-bottom: 1px solid #f39c12;
+	text-indent: 6px;
+}
+.heading02{
+	text-align: center;
+}
+.heading03{
+	font-weight: normal;
+	height: 42px;
+	background-color: #ecf0f1;
+	position: relative;
+}
+.heading03 p{
+	/*color: #95a5a6;*/
+	font-size: 14px;
+	text-indent: 6px;
+	position: absolute;
+	bottom: 0;
+}
+
+.heading_payment{
+	font-weight: normal;
+	/*border-bottom: 1px solid #BFD1E3;*/
+	text-indent: 6px;
+}
+.heading04{
+	background-color: #6786a4;
+	border-bottom: 1px solid #cccccc;
+	padding: 6px;
+	color: white;
+	margin-top: 24px;
+	text-align: left;
+}
+/*------------------------------------*/
+
+/*--segment--------------------------
+*包含コンテンツを均等幅で表示する
+*clearfix指定が必須
+-------------------------------------*/
+.segment02{
+}
+.segment03{
+}
+.segment04{
+}
+.seg_contents{
+	text-align: center;
+	float: left;
+	overflow: hidden;
+	white-space: nowrap;
+ 	text-overflow: ellipsis;
+ 	-webkit-text-overflow: ellipsis;
+ 	-o-text-overflow: ellipsis;
+
+}
+.segment02 .seg_contents{
+	width: 50%;
+}
+.segment03 .seg_contents{
+	width: 33.33%;
+}
+.segment04 .seg_contents{
+	width: 25%;
+}
+/*segmentのアレンジ*/
+.seg_contents.left{
+	text-align: left;
+}
+.seg_contents.right{
+	text-align: right;
+}
+/**/
+
+/*--------------------------------------*/
+
+/*------right_link----------
+*右よせのリンク
+--------------------------*/
+.right_link{
+	font-size: 14px;
+	text-decoration: underline;
+	text-align: right;
+}
+.right_link:LINK,
+.right_link:VISITED{
+	color: #845b96;
+}
+.right_link:HOVER{
+	color: #e74c3c;
+}
+/*-------------------------*/
+
+/*---input_table-------------
+*１行にタイトルとテキストボックスを一つづつ持つテーブル
+*パスワード入力などで使用する
+---------------------------*/
+.input_table01,
+.input_table02{
+	width: 100%;
+}
+.input_table01{
+	height: 100%;
+}
+.input_table01 caption{
+	font-size: 24px;
+}
+.input_table01 tr{
+	height: 40px;
+}
+.input_table02 tr{
+	height: 28px;
+}
+.input_table01 .title,
+.input_table02 .title{
+	text-align: right;
+}
+.input_table01 .title{
+	font-size: 18px;
+	width: 25%;
+}
+.input_table02 .title{
+	font-size: 14px;
+	width: 40%;
+}
+.input_table01 input,
+.input_table01 input{
+	width: 100%;
+	height: 100%;
+}
+/*-----HostAppで使用するスタイル------------*/
+/*.HostApp_caption{
+	color: #f39c12;
+	border-bottom: 2px solid #f39c12;
+}*/
+/*--------------------------------------*/
+
+/*----ボタン-----------------------
+*submit,deleteなどのボタン
+-----------------------------------*/
+.button_box{
+	padding: 24px 0;
+	text-align: center;
+}
+.button_box button,
+.button_box input{
+	width: 150px;
+}
+.button_box.parallel{
+	width: 50%;
+	float: left;
+}
+.button_box.parallel button,
+.button_box.parallel input{
+	/*display: block;*/
+	width: 140px;
+}
+
+input[type=button],input[type=submit]{
+	-webkit-appearance: none;/*iOSなどの角丸をキャンセル*/
+	-webkit-border-radius: 2px;	/* Safari、Google Chrome */
+    -moz-border-radius: 2px;	/* Firefox */
+    box-shadow: 0 5px 6px -6px #777777;
+    font-family: mplus;
+	src: url("mplus/mplus-1c-light.ttf") format("truetype");
+}
+.submit_button,
+.login_button,
+.delete_button,
+.sub_button,
+.facebook_button{
+	padding: 8px;
+	color: white;
+}
+.submit_button,
+.login_button,
+.sub_button{
+	/*margin-top: 24px;
+	margin-bottom: 24px;*/
+}
+.submit_button,
+.login_button,
+.delete_button,
+.facebook_button{
+	font-size: 18px;
+}
+.submit_button{
+	background-color: #379cbf;
+}
+.login_button{
+	width: 100% !important;
+	background-color: #a3c600;
+}
+.delete_button{
+	background-color: #e74c3c;
+	/*margin-bottom: 24px;*/
+}
+.facebook_button{
+	width: 100%;
+	background-color: #4c69ba;
+	vertical-align: middle;
+}
+.facebook_button img#logo{
+	height: 25.528px;
+	margin-right: 6px;
+}
+.sub_button{
+	background-color: #bdc3c7;
+	/*font-size: 16px;*/
+	/*padding: 2px 0;*/
+}
+.carc_button{
+	font-size: 14px;
+	background-color: #a3c600;
+	color: white;
+	padding: 0 2px;
+}
+.button_disabled{
+	background-color: gray;
+	box-shadow: 0 0 0 0;
+	color: #bdc3c7;
+}
+/*--------------------------------------------------------*/
+
+/*----メニュー関係-----------*/
+.menu_icon{
+	float: left;
+	/*width: 38px;*/
+	padding: 2px;
+}
+.menu_icon img {
+	width: 100%;
+}
+.menu_icon p{
+	font-size: 10px;
+	text-align: center;
+}
+/*------------------*/
+
+/*----イメージアイコン------------*/
+img.icon{
+	height: 24px;
+	width: 24px;
+}
+img.right_icon{
+	height: 40px;
+	width: 40px;
+	float: right;
+}
+/*-------------------------------*/
+
+/*---lock page---*/
+.noLock{
+	display: none;
+}
+.lock{
+	display: inline;
+}
+/*---------------*/
+
+/*---right tab---*/
+.rightTab{
+	height: 46px;
+	position: fixed;
+	z-index: 15;
+	bottom: 0px;
+	right: 6px;
+}
+.rightTab img{
+	height: 40px;
+	width: 40px;
+}
+/*仮設置*/
+/*.editting{
+	background-color: red;
+}*/
+/*------------------*/
+
+/*---------------------------
+*説明文を表示するボックス
+-------------------------------------*/
+.guide_box{
+	border: 1px dashed #5cb4a4;
+	color: #5cb4a4;
+	font-size: 12px;
+	padding: 6px;
+}
+/*------------------------------------*/
+/*--ソート対象クローンのスタイル-----------------*/
+.sort_helper{
+	background-color: #e67e22;
+	opacity: 0.7;
+}
+/*--------------------------------------*/
+/*--トップに表示する状態お知らせポップアップ-----------*/
+.stateGuidePopup{
+	background-color: #41698d;
+  	padding: 36px 0;
+  	font-size: 18px;
+  	color: white;
+  	text-align: center;
+  	position: fixed;
+  	width: 100%;
+  	top: 0;
+  	left: 0;
+ 	z-index: 10;
+
+  	filter: alpha(opacity=80);
+  	-moz-opacity: 0.8;
+  	opacity: 0.8;
+  	-webkit-border-radius: 2px;
+  	-moz-border-radius: 2px;
+  	box-shadow: 0 0 10px -3px #777777;
+}
+.stateGuidePopup p{
+	display: block;
+	padding: 0 36px;
+}
+.stateGuidePopup.slim{
+	padding: 12px 0;
+  	font-size: 14px;
+}
+.stateGuidePopup.slim p{
+	padding: 0 12px;
+}
+.stateGuidePopup p:after{
+	content: ".";
+  	height: 0;
+  	clear: both;
+  	visibility: hidden;
+}
+.stateGuidePopup .closer{
+	float: right;
+	height: 100%;
+}
+/*---------------------------------------*/
+
+.time_select_box{
+text-align: right;
+padding: 4px;
+}
+.icon_box{
+width: 25%;
+float: right;
+}
+.icon_box img{
+float: right;
+}
+/*--rem_infomation--*/
+.rem_infomation{
+padding: 24px;
+border-bottom: 1px solid #cccccc;
+}
+.rem_infomation .chkbx{
+text-align: right;
+margin-bottom: 8px;
+}
+.rem_infomation .guide_box p{
+padding: 2px 0;
+}
+/*-------------------*/
+#right_slide .list_table,
+#right_slide .narrow_list_area{
+padding-top: 12px;
+}
+#usg_menu{
+padding: 12px;
+}
+#usg_menu .menu_icon{
+padding: 6px;
+}
+/*--table--*/
+.list_table{
+width: 100%;
+border-collapse: separate;
+border-spacing: 0;
+text-align: center;
+}
+.list_table td{
+border-bottom: 1px solid #cccccc;
+padding: 12px 8px;
+}
+#pro_setting table input._name,
+#usg_m_detail table input._name{
+width: 128px;
+}
+#usg_m_detail td.md_name{
+position: relative;
+}
+#usg_m_detail .selected_icon{
+position: absolute;
+top: 0;
+left: 0;
+height: 28px;
+width: 28px;
+}
+#usg_m_detail .selected_icon img{
+width: 100%;
+}
+#usg_m_detail .selected_icon img.off{
+
+}
+
+/*-- mdl用クラス (my mdl => mmdl) --*/
+.mmdl_text_box {
+  padding: 16px;
+}
+/*-- md用クラス (my mdl => mmdl) --*/

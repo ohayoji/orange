@@ -1,0 +1,88 @@
+@CHARSET "utf-8";
+.report_table{
+	/*cellspacing="0"に相当*/
+	border-collapse:collapse;
+	color: #7f8c8d;
+}
+.report_table tr th{
+	border-bottom: 2px solid #bdc3c7;
+}
+.report_table tr td{
+	border-bottom: 1px solid #bdc3c7;
+}
+.report_table tr td.title{
+	font-size: 14px;
+	text-align: center;
+	
+	overflow: hidden;
+ 	white-space: nowrap;
+ 	text-overflow: clip;
+ 	-webkit-text-overflow: clip;
+ 	-o-text-overflow: clip;
+ 	
+ 	max-width: 70px;
+}
+.report_table tr td.amount{
+	text-align: center;
+}
+.report_table tr td.ratio{
+	font-size: 14px;
+	text-align: right;
+}
+.report_table tr td.icon{
+	width: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+/*--------------------------------------*/
+#report_list_area{
+	position: relative;
+	/*overflow: auto;*/
+}
+#report_list_area table tr th,
+#data_table_area table tr th{
+	height: 28px;
+}
+#report_list_area table tr td,
+#data_table_area table tr td{
+	height: 36px;
+}
+/*
+*金額の桁が少ないと「金額」文字が縦書きになるため
+*min-widthを指定し必ず横書きになるようにする
+*/
+#data_table_area table tr th.amount_th{
+	min-width: 50px;
+}
+#title_table, #name_table{
+	width: 30%;
+	box-shadow: 5px 0 6px -6px #777777;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
+#data_table_area{
+	width: 70%;
+	margin-left: 30%;
+	
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+#data_table_box table{
+	float: left;
+}
+#data_table_box table caption{
+	border-bottom-color: #bdc3c7;
+	font-size: 18px;
+}
+#data_table_area td.amount{
+	text-align: right;
+}
+#data_table{
+	width: 500px;
+}
+/*-------------------------*/

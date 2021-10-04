@@ -1,0 +1,342 @@
+@CHARSET "utf-8";
+/*-------フォント------------------------------------------*/
+@font-face {
+	font-family: mplus;
+	src: url("mplus/mplus-1c-light.ttf") format("truetype");
+}
+/*--------------------------------------------------------*/
+
+/*---------body, html-----------------------------------------------*/
+body, html{
+	line-height: 1.5;	
+	/*画面いっぱいに高さを確保/これをしないと内包したコンテンツ分しか確保されない*/
+	height: 100%;
+}
+/*--------------------------------------------------------*/
+
+/*---------container-----------------*/
+#container,
+#container_01{
+	width: 100%; 
+	position: relative;
+	/*高さが可変する*/
+	height: auto !important;    
+	height: 100%; 
+	/*最低でも画面いっぱいの高さを確保*/  
+	min-height: 100%;
+	font-size: 16px;
+	/*color: #34495e;*/
+	color: #637688;
+}
+#container_01{
+	background-color: #ecf0f1;
+}
+/*------------------------------------------*/
+
+/*-------------header-----------------------*/
+#header{
+	background-color: #404040;
+	color: white;
+}
+#header > div{
+	padding: 12px;
+}
+#header div#post_name,
+#header div#page_title{
+	/*padding: 12px;*/
+	/*text-align: center;*/
+	font-size: 14px;
+}
+#icon_area{
+	float: right;
+}
+#icon_area .header_icon{
+	height: 18px;
+	float: right;
+	margin-left: 18px;
+	margin-top: 3px;
+}
+/*#first_box{
+	padding: 6px 12px;
+}
+#second_box{
+	padding: 12px;
+}*/
+/*#post_name{
+	text-align: center;
+	font-size: 14px;
+}
+#page_title{
+	text-align: left;
+	font-size: 14px;
+}*/
+/*#icon_area .header_icon{
+	height: 18px;
+	float: right;
+	margin-left: 24px;
+	margin-top: 3px;
+}*/
+/*------------------------------------------*/
+
+/*-----------------メインエリア-------------------------*/
+#main_alea{ 
+	padding-top:24px;
+	padding-bottom: 24px;
+}
+/*------------------------------------------------*/
+
+/*-----------------contents_area---------------*/
+.contents_area,
+.contents_area01{ 
+	/*height: 100%;*/
+    margin-left: auto; 
+    margin-right: auto;
+}
+.contents_area{ 
+	width:98%; 
+}
+.contents_area01{
+	width:94%; 
+}
+/*------------------------------------------*/
+
+/*----------elements-------------------------*/
+/*reset*/
+* {	margin: 0; padding: 0; font-family: "mplus";}
+
+/*input*/
+input{
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+	border: none;
+	font-size: 16px;
+}
+input[type=text],
+input[type=password],
+input[type=email]{
+	-webkit-appearance: none;
+}
+input.faint{
+	border: 1px solid #bdc3c7;
+	font-size: 14px;
+	color: #637688;
+	padding: 6px;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	-moz-box-shadow: inset 0 0 1px rgba(0,0,0,0.2);
+	-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+	box-shadow: inner 0 0 1px rgba(0, 0, 0, 0.2);
+}
+input.narrow01{
+	width: 28px;
+}
+input.narrow02{
+	width: 48px;
+}
+input.narrow03{
+	width: 96px;
+}
+/*input[type=button],input[type=submit]{
+	-webkit-appearance: none;
+	padding: 2px 4px;
+	-webkit-border-radius: 2px;
+    -moz-border-radius: 2px;	
+    box-shadow: 0 5px 6px -6px #777777;
+    font-family: mplus;
+	src: url("mplus/mplus-1c-light.ttf") format("truetype");
+}*/
+
+/*label*/
+label{
+	padding-left: 4px;
+}
+/*---------*/
+
+
+/*a*/
+a { text-decoration : none; display: block;}
+a img{ border-style: none;}
+
+/*img*/
+img { vertical-align : middle;}
+
+/*select*/
+select{
+	font-size: 14px;
+	border: none;
+	background-color: #f5f4ed;
+}
+
+/*table*/
+table caption{
+	border-bottom: 2px solid #34495e;
+}
+table th{
+	text-align: center;
+	border-bottom: 1px solid #bdc3c7;
+	font-weight: normal;
+}
+table td{
+	padding: 4px;
+}
+
+/*button*/
+button{
+	border: none;
+	-webkit-border-radius: 2px;	/* Safari、Google Chrome */
+    -moz-border-radius: 2px;	/* Firefox */
+    box-shadow: 0 5px 6px -6px #777777;
+}
+
+/*dl*/
+dl{
+	margin: 12px 0;
+	-webkit-border-radius: 2px;	/* Safari、Google Chrome */
+    -moz-border-radius: 2px;	/* Firefox */
+}
+dt{
+	text-align: left;
+	border-bottom: 1px #95a5a6 solid;
+	padding: 4px;
+}
+dd{
+	text-align: right;
+	font-size: 14px;
+	padding: 4px;
+	
+}
+/*dlのアレンジ*/
+dl.bgcolor_orthodox{
+	background-color: #ecf0f1;
+}
+dl.conpact{
+	margin: 0;
+}
+dl.conpact *{
+	padding: 2px;
+}
+dl.conpact dd{
+	min-height: 20px;
+}
+dl.color_type01 dt{
+	border-bottom-color: #e67e22;
+}
+dl.color_type02{
+	color: white;
+}
+
+dt span.right{
+	float: right;
+	width: 50%;
+	text-align: right;
+	
+	overflow: hidden;
+ 	white-space: nowrap;
+ 	text-overflow: ellipsis;
+ 	-webkit-text-overflow: ellipsis;
+ 	-o-text-overflow: ellipsis;
+}
+dt span.detail{
+	font-size: 12px;
+}
+/**/
+
+
+
+
+/*------------------------------------------*/
+
+/*-------汎用設定-----------------------------*/
+/*clearfix*/
+.clearfix:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+}
+
+/*color*/
+.orange{
+	color: #e67e22;
+}
+.slategray{
+	color: #95a5a6;
+}
+
+/*fontsize*/
+.f_20{
+	font-size: 20px;
+}
+.f_18{
+	font-size: 18px;
+}
+.f_14{
+	font-size: 14px;
+}
+.f_small{
+	font-size: small;
+}
+
+/*textalign*/
+.ta_center{
+	text-align: center;
+}
+.ta_left{
+	text-align: left;
+}
+.ta_right{
+	text-align: right;
+}
+
+/*display*/
+.hide{
+	display: none;
+}
+
+/*border_radius*/
+.border_radius{
+	-webkit-border-radius: 2px;	/* Safari、Google Chrome */
+    -moz-border-radius: 2px;	/* Firefox */
+    box-shadow: 0 5px 6px -6px #777777;
+}
+.border_radius_2{
+	-webkit-border-radius: 2px;	/* Safari、Google Chrome */
+    -moz-border-radius: 2px;	/* Firefox */
+    box-shadow: 0 0 10px -3px #777777;
+}
+
+/*border_radius*/
+.shadow01{
+    box-shadow: 0 5px 6px -6px #777777;
+}
+.shadow02{
+    box-shadow: 0 0 10px -3px #777777;
+}
+
+/*overflow*/
+.overflow_ellipsis{
+	overflow: hidden;
+ 	white-space: nowrap;
+ 	text-overflow: ellipsis;
+ 	-webkit-text-overflow: ellipsis;
+ 	-o-text-overflow: ellipsis;
+}
+.overflow_clip{
+	overflow: hidden;
+ 	white-space: nowrap;
+ 	text-overflow: clip;
+ 	-webkit-text-overflow: clip;
+ 	-o-text-overflow: clip;
+}
+
+/*opacity*/
+.opacity08{
+	filter: alpha(opacity=80); /*IE用*/
+	-moz-opacity: 0.8; /*古いFirefox用*/
+	opacity: 0.8; /*Chrome, Firefox, Safari, Opera, 等の比較的新しいブラウザ用 */
+}
+/*------------------------------------------*/
+

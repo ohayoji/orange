@@ -1,0 +1,207 @@
+@CHARSET "UTF-8";
+
+/*--bace.cssキャンセル----------------*/
+dl{
+	margin: 0;
+	-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+dt{
+	border-bottom: 0;
+	padding: 0;
+}
+dd{	
+	font-size: 16px;
+	padding: 0;
+	text-align: left;
+}
+/*--------------------------------------*/
+
+/*==リストエリア=====================================*/
+/*--単一の一覧リストエリア--*/
+.list_area,
+/*--グループリストエリア--*/
+.group_list_area{
+	width: 100%;
+}
+/*=================================================*/
+
+/*==リスト===========================================*/
+/*--dl-------------------------*/
+.list_area dl{
+	
+}
+.group_list_area dl{
+	
+}
+/*-------------------------------*/
+
+/*--dt---------------------------*/
+.list_area dl dt,
+.group_list_area dl dt,
+.narrow_group_list_area dl dt{
+	border-bottom: 1px #cccccc solid;
+}
+.group_list_area > dl > dt,
+.narrow_group_list_area > dl > dt{
+	background-color: #f2f2f2;
+	padding: 18px 12px 2px;
+}
+.child_list_area dl dt{
+	padding: 12px 8px 1px;
+	border-bottom: 1px #e67e22 solid;
+	color: #e67e22;
+}
+/*-------------------------------*/
+	
+/*--リスト---------------------
+.list_area　では　dd
+.group_list_area では　li
+がリストになる
+-----------------------------*/
+.list_area dl dd,
+.narrow_list_area dl dd,
+.group_list_area dl dd li{
+	border-bottom: 1px #cccccc solid;
+	padding: 12px;
+}
+.list_area dl dd:after,
+.group_list_area dl dd:after,
+.narrow_group_list_area dl dd:after{
+	content: "."; 
+  	display: block; 
+ 	 height: 0; 
+ 	 clear: both; 
+  	visibility: hidden;
+}
+li.child_list_area{
+	padding-right: 0 !important;
+}
+.list_area dl dd.staff_list{/*スタッフリスト*/
+	color: white;
+	border-bottom-width: 2px;
+	border-bottom-color: white;
+	filter: alpha(opacity=80); /*IE用*/
+	-moz-opacity: 0.8; /*古いFirefox用*/
+	opacity: 0.8; /*Chrome, Firefox, Safari, Opera, 等の比較的新しいブラウザ用 */
+}
+.group_list_area dl dd li{
+	list-style: none;
+}
+
+
+	/*==accessory======*/
+	dd.accessory li:after{
+		content: "."; 
+  		display: block; 
+ 		height: 0; 	
+ 	 	clear: both; 
+  		visibility: hidden;
+	}
+	dd.accessory .list_accessory{
+		text-align: center;
+		position: relative;
+	}
+	dd.accessory .list_accessory img{
+    		width: 24px;
+    		height: 24px;
+	}
+		
+	/*--right_one--*/
+	dd.accessory.right_one .list_body{
+		width: 90%;
+		float: left;
+	}
+	dd.accessory.right_one .list_accessory{
+		width: 10%;
+		float: right;
+	}
+	/*--------------*/
+		
+	/*=================*/
+	
+	/*==リスト内の子リスト==*/
+	.child_list_area dl dd{
+		
+	}
+	.child_list_area dl dd{
+	}
+	.child_list_area dl dd{
+	}
+	/*===================*/
+/*--------------------------*/
+	
+	
+	
+		
+	
+
+/*==================================================*/
+/*dl*/
+/*dl{
+	margin: 12px 0;
+	-webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+dt{
+	text-align: left;
+	border-bottom: 1px #95a5a6 solid;
+	padding: 4px;
+}
+dd{
+	text-align: right;
+	font-size: 14px;
+	padding: 4px;
+	
+}*/
+/*dlのアレンジ*/
+dl.bgcolor_orthodox{
+	background-color: #ecf0f1;
+}
+dl.conpact{
+	margin: 0;
+}
+dl.conpact *{
+	padding: 2px;
+}
+dl.conpact dd{
+	min-height: 20px;
+}
+dl.color_type01 dt{
+	border-bottom-color: #e67e22;
+}
+dl.color_type02{
+	color: white;
+}
+
+/*--list_detail------------------------*/
+span.list_detail{
+	float: right;
+	font-size: 13px;
+	line-height: 2;
+}
+	span.list_detail.on{
+		color: white;
+    		padding: 0px 4px;
+    		border-radius: 4px;
+    		background-color: #2ecc71;
+	}
+	span.list_detail.off{
+		color: gray;
+	}
+/*---------------------------------------*/
+/*dt span.right{
+	float: right;
+	width: 50%;
+	text-align: right;
+	
+	overflow: hidden;
+ 	white-space: nowrap;
+ 	text-overflow: ellipsis;
+ 	-webkit-text-overflow: ellipsis;
+ 	-o-text-overflow: ellipsis;
+}
+dt span.detail{
+	font-size: 12px;
+}*/
+/**/

@@ -1,0 +1,10 @@
+SetEnvIf REDIRECT_HTTPS (.*) HTTPS=$1
+<IfModule mod_rewrite.c>
+RewriteEngine on
+# for http://turba.sakura.ne.jp/dummy_01.*
+RewriteCond %{REQUEST_URI} .*dummy_01.*
+RewriteRule .* http://%{HTTP_HOST}/redirect_message/orange_redirect_message.html [R=301,L]
+# for http
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>

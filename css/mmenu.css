@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+html, body{
+	margin:0 auto;
+	background: #ffffff;
+	}
+#menu li img{
+	height: 16px;
+  	margin-right: 12px;
+
+}
+#menu .mm-navbar-bottom{
+	padding: 12px;
+}

@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+/*--home_header------------------------*/
+#home_header{
+	position: fixed;
+	z-index: 10;
+	background-color: white;
+	width: 100%;
+	padding: 6px 0;
+	border-bottom: 1px solid #f2f2f2;
+	
+	filter: alpha(opacity=80); /*IE用*/
+	-moz-opacity: 0.8; /*古いFirefox用*/
+	opacity: 0.8; /*Chrome, Firefox, Safari, Opera, 等の比較的新しいブラウザ用 */
+}
+#home_header img.logo{
+	height: 36px;
+}
+#home_nav_tab{
+	font-size: 24px;
+}
+#home_header a{
+	float: right;
+	color: #d55400;
+	/*margin-right: 12px;*/
+	/*margin-top: 6px;*/
+}
+#home_header nav ul{
+	list-style: none;
+}
+
+#home_header nav#nav1{
+	display: none;
+	float: right;
+}
+#home_header nav#nav1 a{
+	margin-right: 12px
+}
+#home_header nav#nav1 li{
+	float: left;
+}
+
+
+#home_header nav#nav2{
+	display: none;
+	padding-top: 6px;
+}
+#home_header nav#nav2 ul{
+	text-indent: 12px;
+}
+#home_header nav#nav2 li{
+	border-top: 1px solid #f2f2f2;
+	height: 36px;
+}
+#home_header nav#nav2 li a{
+	/*float: left;*/
+	width: 100%;
+	margin-top: 6px;
+}
+/*-------------------------------------*/

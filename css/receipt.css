@@ -1,0 +1,137 @@
+@CHARSET "UTF-8";
+/*-----共通設定-----------*/
+#menu_list,
+/*#selected_menus,
+#selected_products,*/
+.conttents_title,
+.total_contents,
+#memo_area{
+	margin-top: 12px;
+}
+#menu_list,
+#selected_menus td,
+#selected_products td,
+#rec_entries,
+#detail,
+#pay_type,
+.total_contents{
+	background-color: #f5f4ed;
+}
+#menu_list,
+/*#selected_menus,*/
+#rec_entries,
+#detail,
+#pay_type,
+.total_contents,
+#memo_area{
+	padding: 8px;
+}
+/*------------------*/
+
+/*--receipt_status-------*/
+#receipt_status img{
+	width: 100%;
+	max-width: 200px;
+}
+/*------------------------*/
+
+/*-------selected_menus,#selected_products-------*/
+#selected_menus,#selected_products{
+	width: 100%;
+}
+#selected_menus caption,
+#selected_products caption{
+	border: none;
+	text-align: left;
+}
+#selected_menus td,
+#selected_products td{
+	/*font-size: 14px;*/
+	text-align: center;
+	padding: 6px;
+}
+#selected_menus img,
+#selected_products img{
+	width: 28px;
+	height: 28px;
+}
+#selected_menus .md_label{
+	float: left;
+	margin-left: 10px;
+}
+/*#selected_menus textarea{
+	font-size: 12px;
+	border: none;
+	width: 90%;
+	margin-top: 2px;
+}*/
+.sale_cell{
+	width: 90px;
+}
+.sale_cell .menu_salebox input,
+#selected_products input{
+	/*font-size: 16px;*/
+	width: 54px;
+}
+/*------------------*/
+
+/*--selected_products------------*/
+#selected_products .pro_sel{
+	width: 102px;
+}
+.pro_icon{
+display: none;
+}
+/*----------------------------------*/
+
+/*-----total_contents----*/
+.total_contents{
+	margin-bottom: 6px;
+	/*border-bottom: 1px solid #f5f4ed;*/
+}
+.total_contents dl{
+	margin: 0;
+}
+.total_contents dl dt{
+	border-bottom: none;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+.total_contents dl dd{
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+.total_contents button{
+	width: 25px;
+	font-size: 14px;
+	background-color: #a3c600;
+	color: white;
+}
+.total_contents input{
+	height: 24px;
+    width: 100px;
+}
+.copy_sales_btn p{
+	text-align: left;
+	text-indent: 3px;
+}
+.total_contents .rem_selecter{
+	background-color: #379cbf;
+	color: white;
+	margin-left: 2px;
+}
+.total_contents #staff_per{
+	color: #379cbf;
+}
+/*--------------*/
+/*------メモ----*/
+#memo_area{
+	background-color: #bdc3c7;
+	color: white;
+}
+#memo_area textarea{
+	width: 100%;
+	border: none;
+    font-size: 14px;
+}
+/*--------------*/

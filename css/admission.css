@@ -1,0 +1,142 @@
+@CHARSET "utf-8";
+*{
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+}
+/*#admission_area{
+	padding-top: 56px;
+}*/
+#messe_box,
+#thankyou_messe_box{
+	text-align: center;
+}
+#messe_box img{
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+}
+#messe_box p,
+#thankyou_messe_box p{
+	font-size: 18px;
+	
+	color: #f7ab13;
+	font-weight: bold;
+}
+#admission_form{
+	width: 90%;
+	margin-left:auto;
+	margin-right: auto;
+	margin-top: 6px;
+	padding: 4%;
+	background-color: #f8f5e3;
+}
+#admission_form dl dt{
+	padding-top: 12px;
+}
+#admission_form input{
+	margin-top: 4px;
+	font-size: 18px;
+	border: 1px solid #ecf0f1;
+	padding: 4px;
+}
+#admission_form button{
+	width: 160px;
+}
+#admission_title{
+	font-weight: bold;
+	color: #f7ab13;
+}
+#admission_form .entry .title a{
+	float: right;
+	font-size: 14px;
+	text-decoration: underline;
+	color: #926ea0;
+}
+.salon_data{
+	background-color: #e3edb0;
+	padding: 8px 4px;
+	/*margin-bottom: 20px;*/
+	margin: 10px 0;
+}
+.salon_data_title{
+	text-align: left;
+}
+.salon_data_title a{
+	float: right;
+	font-size: 18px;
+	color: #926ea0;
+}
+.salon_data_contents input{
+	width: 50%;
+}
+#agree{
+	margin-top: 24px;
+	font-size: 14px;
+	text-align: center;
+}
+#agree input, #agree label{
+	margin-left: 6px;
+}
+#agree a {
+	margin: 0 2px;
+	text-decoration: underline;
+	display: inline;
+}
+
+/*--利用規約・プライバシーポリシーポップアップ-----------*/
+#popup_view{
+	overflow-y: auto;
+	height: 90%;
+}
+#popup_contents{
+	overflow-y: auto;
+	height: 90%;
+	-webkit-overflow-scrolling: touch;
+}
+#popup_view .note_contents_area{
+	width: 90%;
+	margin: auto;
+}
+#popup_view ul{
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+}
+#popup_view ul li{
+	list-style: outside decimal;
+  	font-size: 0.95em;
+  	line-height: 140%;
+  	margin: 10px 0 0 0;
+}
+#popup_view ul li ul li {
+  list-style: outside none;
+  margin-left: 20px;
+  text-indent: -1.5em;
+}
+#popup_view ul.child li {
+  list-style: outside none;
+  margin-left: 45px;
+  text-indent: -1.7em;
+}
+#popup_view ul.child {
+  	margin: 15px 0 0 10px;
+}
+#popup_view h3 {
+  margin: 30px 0 20px 0;
+}
+#popup_view p {
+  margin: 20px 0;
+  font-size: 0.95em;
+  line-height: 140%;
+  text-align: justify;
+  text-justify: distribute;
+}
+#popup_view p.tR {
+  	margin: 30px 0 0 0;
+  	font-size: 0.95em;
+  	line-height: 140%;
+  	text-align: right;
+}
+/*---------------------------------*/

@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="スマホでサロン管理「Orange（オレンジ）」のヘルプセンターです。" name="description">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="apple-touch-icon" href="../image/OrangeIcon_114.png" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="../css/base.css" rel="stylesheet" type="text/css"/>
+<link href="../css/items.css" rel="stylesheet" type="text/css"/>
+<link href="../my_plugin/orange_nav/orange_nav.css" rel="stylesheet" type="text/css"/>
+<link href="../css/home.css" rel="stylesheet" type="text/css"/>
+<link href="../my_plugin/my_footer/my_footer.css" rel="stylesheet" type="text/css"/>
+<link href="help.css" rel="stylesheet" type="text/css"/>
+<link href="../css/layout.css" rel="stylesheet" type="text/css"/>
+
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../my_plugin/orange_nav/orange_nav.js"></script>
+<script type="text/javascript" src="help.js"></script>
+<script type="text/javascript" src="../js/url_converter.js"></script>
+<script type="text/javascript" src="../my_plugin/my_footer/my_footer.js"></script>
+<script type="text/javascript" src="../js/url_converter.js"></script>
+
+
+<title>Orange[オレンジ]|ヘルプセンター</title>
+
+<style type="text/css">
+#salon_workflow h4{
+background-color: #e9f5fc;
+margin-top: 12px;
+padding: 6px;
+}
+#salon_workflow dt{
+border-bottom: 1px solid #cccccc;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+
+<!-- 各ヘルプコンテンツ -------------------->
+<div class="help_contents_item clearfix" id="salon_workflow">
+	<h3>
+	Orangeのサロン管理者には「毎日のタスク」と「毎月のタスク」の２種類のタスクがあります
+	</h3>
+	<div class="conbox">
+		<h4>毎日のタスク</h4>
+		<dl>
+			<dt>来店処理</dt>
+			<dd>
+				<p>その日の会計伝票をすべて来店処理して、伝票を完成させましょう。</p>
+				<a class="help_link" href="index.html?visiter=salon&show_target=comp_tutorial">来店処理のやり方を見る</a>
+				<p>伝票は、来店処理まで完了してはじめて完成されます。サロン管理者は必ず来店処理を行ってください。</p>
+				<p>詳しくは<a style="display: inline;" class="help_link" href="index.html?visiter=salon&show_target=receipt_status">伝票ステータスについて</a>をご覧ください。</p>
+			</dd>
+			<dt>レジ締め</dt>
+			<dd>
+				<p>営業が終わったら、日報の「現金売上」を確認してレジ締めをしましょう。</p>
+				<a class="help_link" href="index.html?visiter=salon&show_target=daily_report">日報ガイドを見る</a>
+			</dd>
+		</dl>
+		<h4>毎月のタスク</h4>
+		<dl>
+			<dt>月報を作成する</dt>
+			<dd>
+				<p>１ヶ月間おつかれさまでした。</p>
+				<p>月が終わったら月報作成画面で経費項目を入力して月報を作成しましょう。</p>
+				<a class="help_link" href="index.html?visiter=salon&show_target=create_report">月報作成ガイドを見る</a>				
+			</dd>
+			<dt>さらに便利な機能</dt>
+			<dd>
+				<p>「給与（報酬）承認機能」と「支払い管理機能」を利用することで、給与明細や請求書のやりとりがなくなり、給与振込の作業もカンタンになります。</p>
+				<p>これらの機能を是非ご利用ください。</p>
+			</dd>
+		</dl>
+	</div>
+	<div class="conbox">
+		<h4>便利な機能 <span class="orange">給与（報酬）承認</span> と <span class="orange">支払い管理</span></h4>
+		<dl>
+			<dt>給与（報酬）承認</dt>
+			<dd>
+				<p>サロンスタッフが自分のアカウントでログインすると「売上明細」を確認することができます。</p>
+				<a class="help_link" href="index.html?visiter=staff&show_target=sales_specification">売上明細ガイドを見る</a>
+				<p>売上明細の中にある、給与（報酬）明細を承認してもらいましょう。</p>
+				<a class="help_link" href="index.html?visiter=staff&show_target=rem_specification">報酬承認ガイドを見る</a>								
+			</dd>
+			<dt>支払い管理</dt>
+			<dd>
+				<p>サロンスタッフが給与（報酬）を承認すると、サロン管理者の支払い待ちリストに追加されます。</p>
+				<p>給与（報酬）の支払い（振込）完了時に「支払い済み」に切り替えるだけでOKです。</p>
+				<a class="help_link" href="index.html?visiter=salon&show_target=payment">支払い管理ガイドを見る</a>				
+			</dd>
+		</dl>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="receipt_status">
+	<h3>
+	予約やお会計に関するデータは「伝票」に保存されます。
+	</h3>
+	<div class="conbox">
+	<!-- 伝票に保存される情報リスト -->
+	<h4>伝票に保存される主なデータ</h4>
+	<ul class="f_small" style="list-style-position: inside;">
+ 		<li>来店日時や顧客名、施述メニューなどの基本データ</li>
+		<li>施述料金や割引率（技術・商品）</li>
+		<li>メモ</li>
+		<li>来店回数や支払いタイプ（現金・カード）</li>
+		<li>担当スタイリストの歩合率（技術・商品）</li>
+	</ul>
+	<!-- ---------------------- -->
+	</div>
+	<div class="conbox">
+	<p>伝票は予約ごとに１枚づつ発行され、<br>
+		<span class="orange">予約登録</span>　→
+		<span class="orange">ご来店</span>　→
+		<span class="orange">お会計</span>　→
+		<span class="orange">来店処理<!-- <span class="f_small">（サロン管理者による最終確認）</span> --></span><br>
+		という順序で<strong>ステータス</strong>が変化していきます。</p>
+	</div>
+	<div class="conbox">
+	<figure style="padding-top: 6px;" class="clearfix">
+		<figcaption>伝票ステータスの変化</figcaption>
+		<img title="receipt_life_cycle_2" class="big_img help_img" alt="伝票ステータス変化の図" src="">
+	</figure>
+	<!-- <table style="width: 100%; margin-top: 6px;">
+		<colgroup>
+			<col width="33.3%">
+			<col width="33.3%">
+			<col width="33.3%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>予約登録</th><th>お会計</th><th>来店処理</th>
+			</tr>
+		</thead>
+		<tbody class="f_small">
+			<tr>
+				<td>
+					<p>
+						伝票が作成され、顧客名やメニューなどの予約情報が保存されます
+					</p>
+				</td>
+				<td>
+					<p>
+						会計金額などの会計情報が追加されます<br>
+						この時点でサロンの売り上げに反映されます
+					</p>
+				</td>
+				<td>
+					<p>
+						サロン管理者が、伝票の最終チェックやスタイリストの歩合登録を行います
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table> -->
+	</div>
+	<div class="conbox">
+	<p>伝票は、来店処理まで完了してはじめて完成されます。
+	サロン管理者は必ず来店処理を行ってください。</p>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="reserve_tutorial">
+	<h3>予約を登録しましょう</h3>
+	<div class="conbox">
+		<img title="help_01">
+		<p>日付を選択し、予約を入れたい時間/席をタップします。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_02">
+		<p>メニューなどの必要項目を入力し登録。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_03">
+		<p>予約登録完了です。</p>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="receipt_tutorial">
+	<div class="conbox">
+		<img title="help_04">
+		<p>予約パネルをタップすると詳細ポップアップが表示されます。</p>
+		<p>お客様が来店されたら「来店済み」にチェックを入れてマークしましょう。</p>
+		<p>編集や仮登録もできます。お会計時には「お会計」ボタンをタップします。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_05">
+		<p>すでにメニューが選択されているので詳細項目を選択しましょう。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_06">
+		<p>緑のボタンで合計金額を計算してお会計。</p>
+		<p>お会計をスムーズにするために、ここまでの流れを事前に仮登録しておきましょう。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_07">
+		<p>お客様にレシートを提示することもできます。</p>
+	</div>
+</div>
+
+<div class="help_contents_item clearfix" id="comp_tutorial">
+	<h3>お会計済みの伝票を来店処理することで伝票処理が完了します。</h3>
+	<div class="conbox">
+		<img title="help_08">
+		<p>メニューリストの「伝票」をタップして伝票リストを表示します。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_09">
+		<p>当日のお会計済み伝票リストが表示されます。</p>
+		<p>来店処理をしたい伝票をタップ。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_10">
+		<p>マルチ歩合が設定されている場合は歩合率を選択しましょう。</p>
+		<p class="f_small">*マルチ歩合設定についてはこちら<a style="display: inline;" href="index.html?visiter=salon&show_target=rem_setting">→ マルチ歩合を設定する</a></p>
+		<p>伝票内容を確認し間違いがなければ「登録ボタン」で来店処理完了です。</p>
+		<p><span class="f_small">※金額や支払い方法など、訂正する項目があれば訂正しましょう。</span></p>
+		<p><span class="f_small">※来店処理をしないとスタッフの歩合給などに反映されません。必ず来店処理を行ってください。</span></p>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="area_setting">
+	<h3>サロンの中で「カラーブース」や「VIPルーム」などエリアが分かれている場合や、「１F」「２F」といったようにフロアが分かれている場合には、エリアごとの予約を別で管理する必要があるかもしれません。
+		<br>「マルチエリア設定」を活用しスムーズな予約管理を実現しましょう。
+	</h3>
+	<div class="conbox">
+		<img title="help_11">
+		<p>メニューリストの「サロン設定」をタップしてサロン設定画面を表示します。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_54">
+		<p>「オプション」の「マルチエリア設定」をタップ</p>
+	</div>
+	<div class="conbox">
+		<img title="help_14">
+		<p>エリアを登録しましょう。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_15">
+		<p>エリアの数だけ予約表が作成されます。</p>
+		<p>「エリア表示」モードで指定のエリアだけ表示することもできます。</p>
+		<p class="f_small"> *写真は「全席表示」モード</p>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="biz_time_setting">
+	<div class="conbox">
+		<img title="help_11">
+		<p>メニューリストの「サロン設定」をタップしてサロン設定画面を表示します。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_12">
+		<p>サロンにあわせて営業時間・予約帳表示時間を設定しましょう</p>
+		<table>
+			<tr>
+				<td>営業時間</td>
+				<td>サロンの営業時間</td>
+			</tr>
+			<tr>
+				<td>予約帳表示時間</td>
+				<td>営業時間外の時間帯も含めた「予約帳に表示する時間」
+					<p class="f_small">	*最低でも営業時間より前後１時間以上多めに設定してください</p>
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="staff_setting">
+	<div class="conbox">
+		<img title="help_16">
+		<p>メニューリストの「スタッフ管理」→「スタッフ設定」をタップしてスタッフ設定画面を表示します。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_17">
+		<p>スタッフを追加するには右下の「＋」ボタンをタップ。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_18">
+		<p>各項目を入力して登録しましょう。</p>
+		<table>
+			<tr>
+				<td>名前</td>
+				<td>スタッフのフルネーム
+					<p class="f_small">※苗字と名前は空白で区切らずに続けてください</p>
+				</td>
+			</tr>
+			<tr>
+				<td>予約帳アイコン</td>
+				<td>予約帳に表示されるアイコン
+				<p class="f_small">※２文字以内</p>
+				</td>
+			</tr>
+			<tr>
+				<td>役職</td>
+				<td>スタイリスト／アシスタント</td>
+			</tr>
+			<tr>
+				<td>基本給</td>
+				<td>基本給がある場合は設定
+				<p class="f_small">※完全歩合制などで基本給がない場合は入力しないでください</p>
+				</td>
+			</tr>
+			<tr>
+				<td>技術歩合</td>
+				<td>技術歩合がある場合は歩合率(%)を設定
+				<p class="f_small">※ここで設定した歩合率は、このスタッフのすべての技術売上に適用されます</p>
+				<p class="f_small">※会計伝票ごとに歩合率が変化する場合は、ここでは設定しないでください</p>
+				<p class="f_small">会計伝票ごとに歩合率が変化する場合<a href="index.html?visiter=salon&show_target=rem_setting">→ 歩合パターンを設定する</a></p>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="conbox">
+		<img title="help_19">
+		<p>スタッフが追加されました。</p>
+		<p>この時点ではまだスタッフがOrangeにアクセスすることはできません。</p>
+		<p>
+			サロン様のアドレスに送信されたメールをスタッフに転送したうえで、「スタッフ操作ガイド」の
+			<a style="display: inline;" href="index.html?visiter=staff&show_target=staff_signup">スタッフアカウントを登録しよう</a>
+			を参考に、スタッフにアカウント登録をしてもらいましょう。
+		</p>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="menu_detail_setting">
+	<div class="conbox">
+		<img title="help_23">
+		<p>「サロン設定」ページの「メニュー詳細」を選択。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_24">
+		<p>各メニューに詳細項目を登録しましょう。</p>
+		<p>ここで登録されたメニュー詳細は伝票入力時にリストアップされ、スムーズな入力ができるようになります。</p>
+		<p>入力したいメニューの「＋」ボタンをタップ</p>
+	</div>
+	<div class="conbox">
+		<img title="help_25">
+		<p>名前と金額を入力、保存ボタンを押して登録完了です。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_26">
+		<p>リボンをタップして、伝票入力時にデフォルトで選択状態にすることもできます。</p>
+		<p class="f_small">(上の例：カラーを選択した時、最初はリタッチが選択されています)</p>
+		<p>右側の並べ替えボタンをドラッグして並び順を変更することもできます。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_05">
+		<p>伝票画面で登録されたメニュー詳細を選択できるようになります。</p>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="menu_setting"></div>
+
+
+<div class="help_contents_item clearfix" id="product_setting">
+	<div class="conbox">
+		<img title="help_27">
+		<p>事前に店販商品を登録しておくことで伝票入力がスムーズになります。</p>
+		<p>「サロン設定」ページの「商品」を選択。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_28">
+		<p>「＋」ボタンで商品を追加しましょう。</p>
+		<p>商品名・金額を入力し、保存ボタンタップで登録完了です。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_29">
+		<p>伝票入力時に商品を選択できるようになります。</p>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="rec_entry_setting">
+	<h3>
+		Orangeには伝票入力のオプション項目がいくつか用意されています
+		<br>必要なオプション項目を有効にしておくことで詳細な伝票データを管理できます
+	</h3>
+	<div class="conbox">
+		<img title="help_30">
+		<p>「サロン設定」ページの「オプション項目」を選択。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_31">
+		<p>有効にしたい項目にチェックを入れましょう。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_32">
+		<p>有効になった項目は伝票入力画面に表示され、選択・入力が可能になります。</p>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="subjects_setting">
+	<h3>Orangeの月報を使えば、売上から経費・利益に至るまで詳細に管理することができます。
+		<br>まずはサロンにフィットした勘定科目を設定しましょう。
+		<br>例えば「売上」だけで良い場合はすべてのチェックを外してしまいましょう。
+	</h3>
+	<div class="conbox">
+		<img title="help_33">
+		<p>「サロン設定」ページ「オプション」の「勘定科目」を選択。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_34">
+		<p>有効にしたい勘定科目にチェックを入れましょう。</p>
+		<p class="f_small">※「技術売上」「商品売上」は無効にできません。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_35">
+		<p>有効になった勘定科目は月報に表示されます。<a href="index.html?visiter=salon&show_target=monthly_report">→月報</a></p>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="rem_setting">
+	<h3>会計伝票ごとに歩合率を切り替える必要がある場合はマルチ歩合を設定しましょう。
+		<br>ここで歩合パターンを登録しておけば、伝票ごとに個別に歩合率を切り替えることができます。
+	</h3>
+	<div class="conbox">
+		<img title="help_36">
+		<p>「サロン設定」ページ「オプション」の「マルチ歩合設定（技術or商品）」を選択。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_37">
+		<p>歩合パターンを登録しましょう</p>
+	</div>
+	<div class="conbox">
+		<img title="help_38">
+		<p>サロン管理者の来店処理画面で歩合率を選択できるようになります。<a href="index.html?visiter=salon&show_target=comp_tutorial">→来店処理</a></p>
+		<p class="f_small">*歩合率セレクタはサロン管理者にのみ表示されます</p>
+		<p class="f_small">*技術歩合が設定されているスタッフの場合、ここで設定された技術歩合パターンは無視され、スタッフ個人の技術歩合が適用されます
+			<a href="index.html?visiter=salon&show_target=staff_setting">→スタッフ設定</a></p>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="receipt_search"></div>
+
+
+<div class="help_contents_item clearfix" id="payment">
+	<div class="conbox">
+		<img title="help_47">
+		<p>メニューリスト「スタッフ管理」の「支払い管理」から支払い管理画面に移動します。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_48">
+		<p>承認済みの報酬リストが表示されます。</p>
+		<p class="f_small">（デフォルトでは未払いの報酬リストが表示されています）</p>
+		<p>支払いが完了したら「支払済にする」ボタンで更新しましょう。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_49">
+		<p>支払い済みに更新完了です。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_50">
+		<p>細かい条件を指定して検索することもできます。</p>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="add_rems">
+	<h3>基本給や技術歩合以外の支払いは「手当」で管理しましょう。</h3>
+	<div class="conbox">
+		<img title="help_39">
+		<p>メニューリスト「スタッフ管理」から「手当」を選択。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_40">
+		<p>右下の「＋」ボタンタップで入力フィールドを表示。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_41">
+		<p>スタッフ・手当名・金額を入力し登録。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_42">
+		<p>手当が追加されました。</p>
+		<p>登録済みの手当を編集することもできます。</p>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="monthly_report">
+	<h3>Orangeの月報を使えば、売上から経費・利益に至るまで詳細に管理することができます。</h3>
+	<div class="conbox">
+		<img title="help_43">
+		<p>メニューリストから「月報」を選択。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_44">
+		<p>表示する期間を選択し「集計して表示」をタップ。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_45">
+		<p>月報が表示されます。スクロールしてすべての情報を閲覧できます。</p>
+		<p class="f_small">
+			*勘定科目設定でサロンにフィットした月報を作ることができます。
+			<a href="index.html?visiter=salon&show_target=subjects_setting">→勘定科目設定</a>
+		</p>
+	</div>
+	<div class="conbox">
+		<img title="help_46">
+		<p>グラフ表示機能で業績も一目瞭然です。</p>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="rem_specification">
+	<h3>報酬承認機能を使うことで「給与明細」や「請求書」といった面倒なやり取りをしなくてよくなります</h3>
+	<div class="conbox">
+		<img title="help_51">
+		<p>スタッフログインのメニューリストから「売上明細」をタップ</p>
+	</div>
+	<div class="conbox">
+		<img title="help_52">
+		<p>当月の売上明細が表示されています。</p>
+		<p>月セレクタを切り替えて先月の明細を表示しましょう。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_53">
+		<p>明細の内容を確認して「報酬を承認する」ボタンをタップ。</p>
+		<p>サロン管理者に承認したことが通知され、支払い待ちリストに加わります。</p>
+		<p>あとは支払いを待つだけです。</p>
+		<p class="f_small">※承認ボタンを押さないと支払い待ち状態になりません。必ず承認作業を行ってください</p>
+		<p class="f_small">※明細に間違いがある場合はサロン管理者に問い合わせてください。</p>
+	</div>
+</div>
+
+
+<div class="help_contents_item clearfix" id="staff_signup">
+	<div class="conbox">
+		<p>あなたがサロンスタッフに登録されると、サロン管理者あてにEメールが送信されます。</p>
+		<p>そのEメールを管理者から転送してもらい、本文中のURLから「スタッフアカウント作成ページ」にアクセスしてください。</p>
+		<img title="help_20">
+		<p>サロン名、スタッフ名を確認し</p>
+	</div>
+	<div class="conbox">
+		<img title="help_21">
+		<p>入力フォームにスタッフアカウント情報を入力し、サインアップボタンタップで登録完了です。</p>
+		<p>これでスタッフアカウントでログインできるようになりました。</p>
+		<p>「設定」画面ではアカウント情報を編集したり、カラー（予約帳に表示される）を選ぶことができます。</p>
+	</div>
+</div>
+<div class="help_contents_item clearfix" id="deductions">
+	<h3>
+		源泉徴収や社会保険などの給与控除も管理することができます
+		<br>毎月の締め作業で、スタッフごとの給与控除を登録しましょう
+	</h3>
+	<div class="conbox">
+		<img title="help_55">
+		<p>メニューリストの「スタッフ管理」→「給与控除管理」をタップして給与控除設定画面を表示します。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_56">
+		<p>「＋」ボタンから入力フィールドを表示し、スタッフ・控除項目・金額を入力。</p>
+		<p>項目リストにない場合は「その他」を選んでメモを残しておきましょう。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_57">
+		<p>追加された控除科目はスタッフごとにリストアップされます。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_58">
+		<p>科目ごとにフィルタをかけて検索、合計を出すこともできます。</p>
+	</div>
+</div>
+<div class="help_contents_item clearfix" id="daily_report">
+	<h3>毎日の締め作業には日報を活用しましょう</h3>
+	<div class="conbox">
+		<img title="help_59">
+		<p>メニューリストの「日報」をタップし日報ページを表示。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_60">
+		<p>その日の最新データが一覧表示されています。</p>
+		<ul>
+			<li>来店人数</li>
+			<li>技術売上</li>
+			<li>商品売上</li>
+			<li>現金売上</li>
+			<li>カード売上</li>
+			<li>合計売上</li>
+		</ul>
+		<p class="f_small">*「技術＋商品」＝「現金＋カード」＝「合計売上」となります</p>
+		<p class="f_small">*お会計済みの伝票データが反映されます（未会計のデータは反映されません）</p>
+	</div>
+	<div class="conbox">
+		<img title="help_61">
+		<p>ページトップには常に最新の月合計データが反映されています。</p>
+	</div>
+</div>
+<div class="help_contents_item clearfix" id="staff_report">
+	<h3>スタッフレポートではサロンスタッフ全員の最新データを見ることができます。</h3>
+	<div class="conbox">
+		<img title="help_62">
+		<p>メニューリストの「スタッフ管理」→「スタッフレポート」をタップしてスタッフレポートを表示します。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_63">
+		<p>全スタッフの最新データが一覧表示されています。</p>
+		<ul>
+			<li>売上<span class="f_small">（会計済みのもの）</span></li>
+			<li>基本給</li>
+			<li>歩合<span class="f_small">（合計）</span></li>
+			<li>
+				手当<span class="f_small">（合計）</span>
+				<a class="help_link f_small" href="index.html?visiter=salon&show_target=add_rems">→手当管理を見る</a>
+			</li>
+			<li>
+				給与控除<span class="f_small">（合計）</span>
+				<a class="help_link f_small" href="index.html?visiter=salon&show_target=deductions">→給与控除管理を見る</a>
+			</li>
+			<li>支給額<span class="f_small">（基本給＋歩合＋手当ー給与控除）</span></li>
+			<li>
+				支払い状況<span class="f_small">（未払い／支払い済み）</span>
+				<a class="help_link f_small" href="index.html?visiter=salon&show_target=payment">→支払い管理を見る</a>
+			</li>
+		</ul>
+	</div>
+	<div class="conbox">
+		<img title="help_64">
+		<p>横にスクロールしてチェックしましょう。</p>
+	</div>
+</div>
+<div class="help_contents_item clearfix" id="page_rock">
+	<h3>
+		ページロック機能で、見られたくないページをロックできます
+		<br>サロン管理者ログインの状態でサロンスタッフが使用する場合
+		<span class="f_small">（POSレジとして使う時など）</span>も安心です
+	</h3>
+	<div class="conbox">
+		<img title="help_65">
+		<p>メニューリストの「サロン設定」→「ページロック」をタップしてページロック設定を表示します。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_66">
+		<p>ロックしたいページにチェックを入れます。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_67">
+		<p>ロックされたページには鍵マークが表示され、管理者パスワードを入力しないとアクセスできなくなります。</p>
+		<p>再びロックを解除するにはチェックを外しましょう。</p>
+	</div>
+</div>
+<div class="help_contents_item clearfix" id="create_report">
+	<h3>月の業績を月報に保存して蓄積し、データ分析に役立てましょう。</h3>
+	<div class="conbox">
+		<img title="help_68">
+		<p>月報画面右上の「月報を作成する」をタップして月報作成画面を表示しましょう。</p>
+		<p class="f_small">*月報画面については<a class="help_link" href="index.html?visiter=salon&show_target=monthly_report">月報を見る</a>をご覧ください</p>
+	</div>
+	<div class="conbox">
+		<img title="help_69">
+		<p>左上に「現在何月の月報を作成中か」が表示されます。</p>
+		<p>科目リストにはサロンで使用されている勘定科目が表示されているので、各科目に当月のデータを入力していきます。</p>
+		<p class="f_small">*勘定科目設定については<a class="help_link" href="index.html?visiter=salon&show_target=subjects_setting">勘定科目を設定する</a>をご覧ください</p>
+	</div>
+	<div class="conbox">
+		<img title="help_70">
+		<p>「利益」は計算ボタンを押して自動計算しましょう。</p>
+		<p>「技術売上＋商品売上」-「経費合計」が算出されます。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_71">
+		<p>登録ボタンタップで月報作成完了です。月報画面に反映されます。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_72">
+		<p>月切り替えフィールドで月を切り替えて、過去の月報を編集・追加することができます。</p>
+		<p>ユーザー登録後に過去月報を作っておけば長期間のデータ分析が可能になります。</p>
+	</div>
+</div>
+<div class="help_contents_item clearfix" id="sales_specification">
+	<h3>売上明細では、当月の売上や控除明細、日別明細、給与・報酬明細など全てのデータを確認することができます</h3>
+	<div class="conbox">
+		<img title="help_51">
+		<p>スタッフログインのメニューリストから「売上明細」をタップ</p>
+	</div>
+	<div class="conbox">
+		<img title="help_73">
+		<p>当月の売上や給与・報酬の明細が表示されています。</p>
+	</div>
+	<div class="conbox">
+		<img title="help_74">
+		<p>スクロールすると日ごとの伝票明細を確認できます。</p>
+		<p class="f_small">※<a class="help_link" href="index.html?visiter=staff&show_target=rem_specification">報酬承認機能</a>を使うことで給与明細などの面倒なやり取りをなくすことができます</p>
+	</div>
+</div>
+<div class="help_contents_item clearfix" id="welcome">
+	<div class="conbox">
+		<p>目次から項目を選択してください</p>
+	</div>
+</div>
+<!-- ----------------------------- -->
+
+
+
+
+
+
+
+	<div id="main_area" class="after_orange_nav_area home_contents" style="text-align: left;">
+		<div class="contents_area clearfix vp_24">
+			<h1>
+				Orangeヘルプセンター
+				<br><span class="f_14">Orange使い方ガイド</span>
+			</h1>
+			<div id="help_contents">
+				<div class="clearfix" id="help_contents_title">
+					<img alt="" src="../image/OrangeIcon_slim.png">
+					<h2></h2>
+				</div>
+				<p id="help_contents_caregory"></p>
+				
+				
+			</div>
+			<div id="help_index">
+				<!-- ヘルプカテゴリタブ -->
+				<div id="help_visiter_tab" class="clearfix">
+					<ul>
+						<li title="salon">
+							サロン管理者<br>操作ガイド
+						</li>
+						<li title="staff">
+							スタッフ<br>操作ガイド
+						</li>
+					</ul>
+				</div>
+				<!-- --------------- -->
+				<!-- 目次 -->
+				<h2>目次</h2>
+				<dl id="help_index_list">
+				</dl>
+				<!-- ---- -->
+			</div>
+		</div>
+	</div>	
+	
+	
+	
+	
+	<!-- サイトラベル -->
+	<div id="site_label" class="footer_contents contents_area">
+		<script type="text/javascript" lang="JavaScript" src="https://trusted-web-seal.cybertrust.ne.jp/seal/getScript?host_name=orange01.jp&amp;type=45&amp;svc=4&amp;cmid=2012706"></script>
+	</div>
+	<!-- ----------- -->
+</div>
+</body>
+</html>

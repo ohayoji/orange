@@ -1,0 +1,209 @@
+@CHARSET "UTF-8";
+/*予約帳部分はpaddingを０に*/
+#main_alea{
+	padding-bottom: 0;
+}
+#main_alea table td{
+	padding: 0;
+}
+
+
+#posting_rem_comp_area > *{
+	float: left;
+}
+#posting_rem_comp_area > a{
+	margin-left: 6px;
+}
+
+.top_nav{
+	padding: 6px;
+	border-bottom: 1px solid #95a5a6;
+}
+.top_nav.date > *{
+	float: left;
+	margin-right: 8px;
+}
+.top_nav #viewtype_buttons{
+	float: right;
+}
+a.like_button01{
+	font-size: 14px;
+	padding: 0 4px;
+	border: 1px solid #845b96;
+	color: #845b96;
+}
+.button01{
+	float: left;
+  	width: 68px;
+  	padding: 2px 2px;
+	font-size: 14px;
+	color: white;
+	margin: 4px;
+	background-color: #c2c2c2;
+	/*margin-bottom: 4px;*/
+}
+/*^---------*/
+
+
+
+/*---予約帳----*/
+
+#reserv_alea{
+	width: 80%;
+	overflow: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+.forScroll{
+	/*position: relative;*/
+}
+
+#reserv_alea table{
+	float: left;
+}
+#reserv_alea table tr td,
+#time_table tr td{
+	height: 40px;
+	position: relative;
+}
+#time_colmun{
+	width: 20%;
+	float: left;
+}
+#time_table{
+	width: 100%;
+	font-size: 14px;
+	text-align: center;
+
+	/*--cellspasing=0に相当-----*/
+	border-spacing:0;
+	border-collapse:collapse;
+}
+#time_table tr td{
+	border-top: 1px solid white;
+}
+#time_table .capa{
+	background-color: #e87e04;
+	color: white;
+}
+.area_reserv_table{
+	/*列幅を固定(thやtdに幅を指定して固定する)*/
+	table-layout: fixed;
+	/*--cellspasing=0に相当-----*/
+	border-spacing:0;
+	border-collapse:collapse;
+}
+.area_reserv_table caption{
+	border: none;
+	overflow: hidden;
+ 	white-space: nowrap;
+ 	text-overflow: ellipsis;
+ 	-webkit-text-overflow: ellipsis;
+ 	-o-text-overflow: ellipsis;
+}
+.area_reserv_table tr td.o{
+	border-right: 1.0px solid #95a5a6;
+	border-top: 1px solid #95a5a6;
+}
+.area_reserv_table tr td.h{
+	border-right: 1.0px solid #95a5a6;
+	border-top: 1px dashed #95a5a6;
+}
+/*--------------inner--------*/
+.inner_capa_bar{
+	float: left;
+}
+.inner_capa_table{
+	width: 100%;
+	/*--cellspasing=0に相当-----*/
+	border-spacing:0;
+	border-collapse:collapse;
+}
+.inner_capa_table tr td{
+	width: 100%;
+	color: #e87e04;
+	text-align: center;
+	font-size: 14px;
+	border-top: 1px solid white;
+}
+/*-----------------------*/
+
+
+/*-----panel---------------------*/
+.panel{
+	width: 92%;
+	color: white;
+	font-size: 12px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+
+	filter: alpha(opacity=80); /*IE用*/
+	-moz-opacity: 0.8; /*古いFirefox用*/
+	opacity: 0.8; /*Chrome, Firefox, Safari, Opera, 等の比較的新しいブラウザ用 */
+
+
+	position: absolute;
+
+	left:3%;
+	z-index: 3;
+
+	-webkit-border-radius: 5px 5px 5px 5px;	/* Safari、Google Chrome */
+    -moz-border-radius: 5px 5px 5px 5px;	/* Firefox */
+}
+.panel_contents{
+
+	overflow: hidden;
+ 	white-space: nowrap;
+ 	text-overflow: clip;
+ 	-webkit-text-overflow: clip;
+ 	-o-text-overflow: clip;
+}
+.panel_popup{
+	z-index: 5;
+
+	filter: alpha(opacity=50); /*IE用*/
+	-moz-opacity: 0.5; /*古いFirefox用*/
+	opacity: 0.5; /*Chrome, Firefox, Safari, Opera, 等の比較的新しいブラウザ用 */
+
+	/*-webkit-border-radius: 2px;	/* Safari、Google Chrome */
+    /*-moz-border-radius: 2px;	/* Firefox */
+    -webkit-border-radius: 5px 5px 5px 5px;	/* Safari、Google Chrome */
+    -moz-border-radius: 5px 5px 5px 5px;	/* Firefox */
+    box-shadow: 0 0 10px -3px #777777;
+}
+/*.panel img{
+	height: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}*/
+/*---------------------------*/
+
+/*--popupview--------------*/
+#popup_view dd{
+	overflow: hidden;
+ 	white-space: nowrap;
+ 	text-overflow: clip;
+ 	-webkit-text-overflow: clip;
+ 	-o-text-overflow: clip;
+}
+#popup_view #today_box{
+	padding-top: 8px;
+	font-size: 14px;
+	text-align: center;
+}
+#today_box #come_box,
+#today_box #bag_box{
+	padding: 4px 0;
+	width: 50%;
+	float: left;
+}
+#bag_box input{
+	width: 36px;
+	margin-left: 4px;
+}
+#today_box .button{
+	font-size: 16px;
+}
+/*-----------------------------*/

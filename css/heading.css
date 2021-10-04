@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+/*---------------------------
+見出し要素（h1 ~ h5 または dt）に直接クラス指定する
+-----------------------------*/
+
+/*------------------
+見出しタイプ
+mh = my_heading
+*/
+.mh_left_border_nomal{
+	color: #aaa;
+	border-left: 4px solid #aaa;
+    padding: 0 6px;
+}
+.mh_bg_color_nomal{
+	background-color: #aaa;
+	padding: 6px;
+	border-bottom: 1px solid #cccccc;
+    color: white;
+}
+/*---------------------------*/
+
+/*--mh_color_theme------------------
+ヘッダーカラーテーマ
+*/
+/*mh_left_borderのカラーテーマ*/
+.mh_left_border_color_theme_orange01{
+	color: #f39c12;
+    border-color: #f39c12;
+}
+.mh_left_border_color_theme_orange02{
+	color: #d55400;
+    border-color: #d55400;
+}
+.mh_left_border_color_theme_blue01{
+	color: #3498db;
+	border-color: #3498db;
+}
+.mh_left_border_color_theme_white{
+	color: white;
+	border-color: white;
+}
+/*mh_bg_colorのカラーテーマ*/
+.mh_bg_color_color_theme_blue01{
+	background-color: #6786a4;
+}
+/*----------------------------------*/

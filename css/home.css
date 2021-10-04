@@ -1,0 +1,449 @@
+@CHARSET "UTF-8";
+*{	
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+	color: #637688;
+}
+h1{
+	font-size: 20px;
+}
+h2{
+	font-size: 18px;
+}
+h3{
+	font-size: 16px;
+	color: #d55400;
+	font-weight: normal !important;
+}
+
+/*--items------------*/
+p.heading{
+	color: #d55400;
+}
+video{
+	width: 70%;
+	height: auto;
+	max-width: 320px;
+	max-height: 90%;
+	
+	position: fixed;
+	top: 50px;
+	z-index: 30;
+	
+	display: none;
+}
+a.help_link{
+	color: #845b96;
+	text-decoration: underline;
+}
+.video_button_area{
+	width: 140px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.video_button_area img{
+	height: 36px;
+	float: left;
+}
+.video_button_area p{
+	margin-top: 8px;
+	float: right;
+}
+
+.home_center_contents_box{
+	width: 90%;
+	margin: 24px auto;
+	padding: 24px 0;
+}
+button.admission{
+	padding: 12px 24px;
+	background-color: #ffab01;
+	color: white;
+	font-size: 16px;
+	-webkit-border-radius: 36px;	/* Safari、Google Chrome */
+    -moz-border-radius: 36px;	/* Firefox */
+}
+/*button.admission .admission_detail{
+	color: white;
+	font-size: 12px;
+}*/
+/*---------------------*/
+
+/*--home_top_area----------------------*/
+#home_top_area{
+	position: relative;
+	width: 100%;
+	height: 420px;	
+	/*--背景画像を目一杯広げて表示する--------------*/
+	background-image: url('../image/e_05.png');
+    background-size: cover;
+    background-position: center center;
+    /*--------------------------------------*/
+}
+#home_top_area #center_box{
+	width: 100%;
+	text-align: center;
+	
+	position: absolute;
+	top: 100px;
+	z-index: 6;	
+}
+.home_center_box_contents{
+	margin-top: 12px;
+}
+.home_center_box_contents *{
+	color: white;
+}
+/*.home_center_box_contents h1{
+	font-size: 20px;
+}*/
+#home_top_area #center_box img.logo{
+	height: 48px;
+}
+/*--------------------------------------*/
+
+
+#home_main_area{
+	width: 100%;
+}
+
+/*--home_contents-------------------*/
+.home_contents{
+	width: 100%;
+	padding: 48px 0;
+	text-align: center;
+}
+.home_contents_title{
+	font-size: 20px;
+}
+.home_contents img.big_img{
+	width: 100%;
+}
+.home_contents .long_message_box{
+	text-align: left;
+	font-size: 14px;
+	padding: 6px;
+}
+/*------------------------------------*/
+
+/*--smartphone_view_images,pc_view_images--------*/
+#smartphone_view_images,
+#pc_view_images{
+	padding-top: 24px;
+}
+#smartphone_view_images figure{
+	width: 50%;
+	float: left;
+}
+#pc_view_images figure{
+	width: 100%;
+}
+#smartphone_view_images figure img,
+#pc_view_images figure img{
+	width: 100%;
+}
+/*---------------------------------*/
+/*--feature_report_contents------------------*/
+.feature_report_contents{
+	text-align: left;
+	padding: 12px 6px;
+}
+.feature_report_contents_title{
+	
+}
+.feature_report_contents_title *{
+	float: left;
+}
+.feature_report_contents_title img{
+	width: 28px;
+}
+.feature_report_contents_title h3{
+	text-indent: 6px;
+	padding-top: 2px;
+	color: #637688;
+}
+.feature_report_contents_image{
+	width: 90%;
+	margin: auto;
+	padding: 24px 0;
+}
+.feature_report_contents_image img{
+	width: 100%;
+}
+.feature_report_contents p,
+.feature_report_contents a{
+	font-size: 14px;
+}
+/*---------------------------------*/
+
+/*--middle_contents------------*/
+.middle_contents{
+	margin: 24px 12px;
+}
+.middle_contents img{
+	width: 50%;
+}
+.middle_contents p{
+	font-size: 14px;
+}
+.middle_contents p.heading{
+	font-size: 18px;
+}
+.middle_contents_small{
+	padding: 24px 0;
+	width: 100%;
+}
+.middle_contents_small .img_box{
+	float: left;
+	width: 10%;
+	vertical-align: middle;
+}
+.middle_contents_small .str_box{
+	float: right;
+	width: 86%;
+}
+.middle_contents_small img{
+	/*width: 50%;*/
+	width: 100%;
+}
+.middle_contents_small p{
+	font-size: 14px;
+	text-align: left;
+}
+.middle_contents_small p.heading{
+	/*text-align: center;*/
+	font-size: 16px;
+	/*color: #d55400;*/
+}
+/*----------------------------------*/
+
+
+
+
+
+/*--planbox----------------------*/
+.plan_box{
+	background-color: white;
+	width: 90%;
+	margin: 24px auto;
+}
+
+.plan_box .title{
+	padding: 12px 0;
+	font-size: 18px;
+	color: white;
+}
+.plan_box .title.free{
+	background-color: #aaa;
+}
+.plan_box .title.premium{
+	background-color: #f1c40f;
+}
+.plan_box .belt{
+	/*background-color: #f1c40f;*/
+	color: white;
+	font-size: 24px;
+}
+.plan_box .belt span{
+	color: white;
+}
+.plan_box .price_table{
+	border-collapse: collapse;
+}
+
+.plan_box .price_table{
+	width: 96%;
+	margin: auto;
+}
+.plan_box .price_table li{
+	list-style-position: inside;
+}
+.plan_box .price_table th{
+	width: 30%;
+}
+.plan_box .price_table th,
+.plan_box .price_table td{
+	padding: 8px;
+	border-bottom: 1px solid #cccccc;
+}
+.plan_box .price_table th,
+.plan_box .price_table th span{
+	color: #aaa;
+}
+.plan_box .price_table td{
+	padding: 6px;
+	text-align: left;
+}
+.plan_box .price_table th span{
+	display: block;
+}
+.plan_box .button_area{
+	padding: 24px 0;
+}
+/*.plan_box .statement{
+	height: 120px;
+	text-align: left;
+	padding: 6px 6px;
+}*/
+/*.plan_box .statement p{
+	height: 28px;
+	line-height: 28px;
+	border-bottom: #95a5a6 solid 1px;
+}*/
+/*-------------------------------*/
+/*--feature_multipaytype_table--------*/
+.feature_multipaytype_link{
+	display: inline;
+}
+table#feature_multipaytype_table{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	
+	-webkit-border-radius: 8px;	/* Safari、Google Chrome */
+    -moz-border-radius: 8px;	/* Firefox */
+    
+    margin-top: 24px;
+}
+#feature_multipaytype_table caption{
+	border: none;
+}
+#feature_multipaytype_table th,
+#feature_multipaytype_table td{
+	border: 1px solid #2c97de;
+	padding: 8px;
+	font-size: 14px;
+}
+#feature_multipaytype_table th{
+	background-color: #89caed;
+	color: white;
+}
+/*------------------------------------*/
+
+/*===plan_difference.php====================*/
+/*-----------------------*/
+#plan_tab ul{
+	list-style: none;
+}
+#plan_tab li{
+	width: 44%;
+	margin-left: 4%;
+	float: left;
+	
+	padding: 6px 0;
+	text-align: center;
+	
+	-webkit-border-radius: 2px 2px 0 0;	/* Safari、Google Chrome */
+    -moz-border-radius:  2px 2px 0 0;	/* Firefox */
+}
+/*------------------------*/
+
+/*--plan_contents-------*/
+.plan_contents{
+	text-align:left;
+	padding: 12px 0;
+}
+/*.plan_contents h3{
+	background-color: #89caed;
+	border-bottom: 1px solid #cccccc;
+	padding: 6px;
+	color: white;
+	margin-top: 24px;
+}*/
+.plice{
+	font-size: 18px;
+}
+.enabled_func_area{
+	/*padding: 6px 6px;*/
+}
+.enabled_func_area dl{
+	margin-top: 12px;
+	border: 1px solid #cccccc;
+	
+	-webkit-border-radius: 4px;	/* Safari、Google Chrome */
+    -moz-border-radius: 4px;	/* Firefox */
+}
+.enabled_func_area dl dt{
+	padding: 6px;
+	border-bottom: 1px solid #cccccc;
+	color: white;
+}
+.enabled_func_area dl dd{
+	padding: 0 6px;
+}
+.enabled_func_area dl dd span{
+	display: block;
+	padding: 0 6px;
+}
+/*------------------------*/
+/*--plan_def_table--------*/
+#plan_def_table{
+	width: 100%;
+	border-collapse: collapse;
+	margin: auto;
+	max-width: 600px;
+	
+}
+/*#plan_def_table caption {
+	border: none !important;
+	padding: 12px;
+}*/
+#plan_def_table thead *{
+	color: white;
+}
+#plan_def_table *{
+	border: 1px solid #cccccc;
+}
+#plan_def_table th,
+#plan_def_table td{
+	padding: 6px;
+}
+#plan_def_table tr.sub *{
+	font-size: 14px;
+	color: #aaa;
+}
+/*-------------------*/
+/*--支払い趣味レーション--------*/
+table#simuration{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	
+	-webkit-border-radius: 8px;	/* Safari、Google Chrome */
+    -moz-border-radius: 8px;	/* Firefox */
+    
+    max-width: 600px;
+    margin: auto;
+}
+#simuration caption,
+#simuration th,
+#simuration td{
+	border: 1px solid #e87e04;
+	padding: 8px;
+}
+#simuration caption{
+	background-color: #faf8f5;
+	color: #e87e04;
+}
+#simuration .span_price_header th{
+	background-color: #fbdba8;
+}
+#simuration .span_price_header th.hidden_header{
+	display: none;
+}
+#simuration .span_title th{
+	background-color: #f2f2f2;
+	padding: 4px 8px;
+}
+#simuration tbody:not(.foot) td.span,
+#simuration tbody:not(.foot) td.price{
+	background-color: #faf8f5;
+}
+#simuration td.span{
+	font-size: 14px;
+}
+#simuration th.strong01{
+	background-color: #f7ab13;
+	color: white
+}
+/*-----------------------------*/
+/*===============================================*/

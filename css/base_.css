@@ -1,0 +1,219 @@
+@CHARSET "UTF-8";
+@font-face {
+	font-family: mplus;
+	src: url("mplus/mplus-1c-light.ttf") format("truetype");
+}
+/*==elements=================================================*/
+* {	margin: 0; padding: 0;}
+
+body, html{
+	/*font-family:"メイリオ",'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',"ＭＳ Ｐゴシック",sans-serif;*/
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	/*color: #393e43;*/
+	color: #637688;
+	line-height: 1.5;
+	/*画面いっぱいに高さを確保/これをしないと内包したコンテンツ分しか確保されない*/
+	height: 100%;
+}
+
+
+a{ text-decoration : none;}
+a:LINK,a:VISITED{color: #845b96;}
+a:HOVER{text-decoration: underline;}
+
+a img{ border-style: none;}
+
+a:HOVER img{ /*透明度を上げる*/ opacity: 0.9;  /*IEに対応*/ filter: alpha(opacity=90);}
+
+
+img { vertical-align : middle;}
+
+
+h1,h2,h3,h4 {  }
+h1{ font-size: 24px;}
+h2{ font-size: 18px;}
+
+input, select{
+	font-size: 16px;
+	padding: 6px;
+	-webkit-appearance: none;
+}
+input[type=text],
+input[type=password],
+input[type=email]{
+	-webkit-appearance: none;
+}
+textarea{
+	font-size: 16px;
+}
+
+button {
+    border: none;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    box-shadow: 0 5px 6px -6px #777777;
+}
+
+ul{
+	list-style: disc;
+	list-style-position: inside;
+}
+
+figure img{
+	width: 100%;
+}
+figcaption{
+	font-size: small;
+	text-align: center;
+}
+
+/*--table-------------------*/
+table{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: center;
+}
+table th, table td{
+	padding: 6px;
+}
+/*---------------------------*/
+
+/*--div-----------------------------------*/
+div#container{
+	width: 100%;
+	position: relative;
+	/*高さが可変する*/
+	height: auto !important;
+	height: 100%;
+	/*最低でも画面いっぱいの高さを確保*/
+	min-height: 100%;
+
+	color: #637688;
+}
+div#main_area{
+}
+/*-----------------------------------------*/
+
+/*============================================================*/
+
+
+
+/*==HTML5　タグ一覧============================================*/
+
+/*--使用頻度 高----------------------------------------*/
+html			HTML自体のタグ
+head			ページ自体のメタ情報をまとめるタグ
+title		ページ自体の題名のタグ
+link			外部ファイルとのリンクのタグ
+meta			ページ自体のメタ情報のタグ
+style		主にCSSをページ自体に書き込むタグ
+script		主にJavaScriptをページに埋め込むタグ
+noscript		主にJavaScriptの代わりに表示するコンテンツのタグ
+body			ブラウザに表示する内容全体のタグ
+h1			見出しのタグ1
+h2			見出しのタグ2
+p			段落のタグ
+hr			段落と段落の区切りのタグ
+blockquote	引用するコンテンツのタグ
+ol			順番の決まったリストのタグ
+ul			順番の決まってないリストのタグ
+li			リストの内容のタグ
+dl			項目に関する記述リストのタグ
+dt			項目に関する記述リストの項目のタグ
+dd			項目に関する記述リストの記述のタグ
+div			特定の意味を持たないブロックのタグ
+a			リンクのタグ
+strong		文章内の重要性の高いテキストのタグ
+span			文章内の特定の意味を持たないテキストのタグ
+br			文章内の改行のタグ
+img			写真や画像のタグ
+table		テーブルのタグ
+tr			テーブル内の行のタグ
+td			テーブル内の行の内容のタグ
+th			テーブル内の行の見出しのタグ
+form			フォームのタグ
+label		フォーム内の項目にラベルを付けるタグ
+input		フォーム内の入力項目のタグ
+select		フォーム内のメニューのタグ
+option		フォーム内のメニューの選択肢のタグ
+textarea		フォーム内の文章の入力項目のタグ
+
+
+/*--使用頻度　中---------------------------------------*/
+base			ページ内の相対URLの基準になるURLのタグ
+section		見出しと内容をまとめるセクションのタグ
+nav			リンクをまとめるセクションのタグ
+article		単独で扱える記事のようなセクションのタグ
+aside		本筋から逸れる解説などのセクションのタグ
+h3			見出しのタグ3
+h4			見出しのタグ4
+hgroup		二つ以上の見出しをまとめるタグ
+header		コンテンツのヘッダー情報をまとめるタグ
+footer		コンテンツのフッター情報をまとめるタグ
+address		コンテンツの作者の連絡先のタグ
+pre			書いたままのテキストを表示するタグ
+figure		図表や画像とその説明をまとめるタグ
+figcaption	図表や画像につける説明のタグ
+em			文章内の特に強調するテキストのタグ
+small		文章内の補足や細目のテキストのタグ
+cite			文章内の作品のタイトルのタグ
+q			文章内の引用部分のテキストのタグ
+abbr			文章内の略称や頭字語のテキストのタグ
+time			文章内の日時のタグ
+code			文章内のプログラムなどのコードのタグ
+ins			後から追記するコンテンツのタグ
+del			後から削除するコンテンツのタグ
+iframe		ページ内にフレームを埋め込むタグ
+embed		ページ内に主にFlash等を埋め込むタグ
+object		ページ内に画像や音声、動画を埋め込むタグ
+param		objectタグのコンテンツのパラメータのタグ
+video		ページ内に動画ファイルを埋め込むタグ
+audio		ページ内に音声ファイルを埋め込むタグ
+canvas		ページ内にcanvasを埋め込むタグ
+caption		テーブルに付けるキャプションのタグ
+tbody		テーブル内のボディ部分のデータをまとめるタグ
+thead		テーブル内のヘッダー部分の行のタグ
+tfoot		テーブル内のフッター部分の行のタグ
+fieldset		フォーム内の内容をまとめるタグ
+legend		fieldsetタグにつけるタイトルのタグ
+
+/*--使用頻度 低------------------------------------------*/
+h5			見出しのタグ5
+h6			見出しのタグ6
+s			文章内の打ち消し線のついたテキストのタグ
+dfn			文章内の定義する用語のテキストのタグ
+var			文章内の変数のテキストのタグ
+samp			文章内のプログラムで出力するテキストのタグ
+kbd			文章内の入力テキストかキーボードのキーのタグ
+sub			文章内の上下に付くテキストのタグ
+sup			文章内の下上に付くテキストのタグ
+i			文章内の慣習上斜体にするテキストのタグ
+b			文章内の慣習上太字にするテキストのタグ
+u			文章内の慣習上下線を引くテキストのタグ
+mark			文章内の目立たせたテキストのタグ
+ruby			文章内のルビを付けるテキストのタグ
+rt			ルビとして付くテキストのタグ
+rp			ルビが表示されない場合のカッコのタグ
+bdi			文章内の書く方向を独立させるテキストのタグ
+bdo			文章内の書く方向を決めるテキストのタグ
+wbr			文章内の改行可能な位置のタグ
+source		ページ内に埋め込む動画や音声を指定するタグ
+track		動画や音声と同期するテキストトラックのタグ
+map			クリックできるイメージマップのタグ
+area			mapのクリックする場所を決めるタグ
+colgroup	col	タグをまとめるタグ
+col			テーブル内の縦列をまとめるタグ
+button		フォーム内のボタンのタグ
+datalist		フォーム内の入力項目に選択肢をつけるタグ
+optgroup		フォーム内の複数のoptionタグをまとめるタグ
+keygen		フォーム内で暗号になるキーを作るタグ
+output		フォーム内の計算結果の出力のタグ
+progress		処理の進捗状況などのゲージのタグ
+meter		予め数値の決まったゲージのタグ
+detail		クリックすると見られる詳細情報のタグ
+summary		detailタグにつけるラベルのタグ
+command		右クリックメニューやキーボード操作の内容のタグ
+menu			ツールバーや右クリックメニューを埋め込むタグ
+/*===========================================================*/

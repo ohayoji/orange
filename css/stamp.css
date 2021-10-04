@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+div.stampbox{
+	width: 16px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 4;
+}
+div.stampbox2{
+	width: 16px;
+	position: absolute;
+	top: 16px;
+	right: 0;
+	z-index: 4;
+}
+div.leftstamp{
+	width: 16px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 4;
+}
+img.stamp{
+	width: 100%;
+	height: auto;
+}

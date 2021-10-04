@@ -1,0 +1,107 @@
+@CHARSET "UTF-8";
+h1,h2{
+	padding: 12px 0;
+}
+ul{
+	list-style-position: inside;
+}
+/*--bace.cssリセット----*/
+dl{margin: 0;}
+dt{border: none;}
+dd{text-align: left; padding-left: 12px;}
+a{display: inline; text-decoration: none;}
+a:LINK{color: #845b96;}
+a:HOVER{text-decoration: underline;}
+a:VISITED{color: #845b96;}
+/*--------------------*/
+/*--目次------------------------*/
+#help_index{
+	padding: 12px 0;	
+}
+#help_index_list dt{color: #d55400;}
+
+#help_visiter_tab{
+	border-bottom: 2px solid #364755;
+	padding-top: 12px;
+}
+#help_visiter_tab ul{
+	list-style: none;
+}
+#help_visiter_tab li{
+	width: 100px;
+	margin-left: 6px;
+	float: left;
+	font-size: 12px;
+	background-color: #f2f2f2;
+	padding: 4px 0;
+	text-align: center;
+	
+	-webkit-border-radius: 2px 2px 0 0;	/* Safari、Google Chrome */
+    -moz-border-radius:  2px 2px 0 0;	/* Firefox */
+}
+/*-----------------------------*/
+/*--ヘルプコンテンツ--------------*/
+#help_contents{padding: 12px 0;}
+#help_contents_title{
+	border-bottom: 1px solid #999999;
+}
+#help_contents_title *{
+	float: left;
+}
+#help_contents_title img{
+	width: 28px;
+}
+#help_contents_title h2{
+	text-indent: 6px;
+	font-size: 18px;
+	/*font-weight: normal;*/
+	padding: 0;
+}
+#help_contents_caregory{
+	font-size: 14px;
+}
+
+.help_contents_item{
+	display: none;
+	padding: 24px 0;
+}
+.help_contents_item a{
+	text-decoration: underline;
+}
+.help_contents_item .conbox{
+	padding: 12px 0;
+}
+.help_contents_item .conbox:after{
+	content: "."; 
+  	display: block; 
+ 	 height: 0; 
+  	clear: both; 
+  	visibility: hidden;
+}
+.help_contents_item img{
+	/*width: 70%;*/
+	width: 260px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 6px 6px 6px -6px #777777;
+}
+.help_contents_item img.big_img{
+	width: 100%;
+}
+.help_contents_item p{
+	text-indent: 6px;
+	margin-top: 6px;
+}
+.help_contents_item h3{
+	font-weight: normal;
+	font-size: 16px;
+}
+.help_contents_item table{
+	font-size: 14px;
+	margin-top: 6px;
+	border-collapse:collapse;
+}
+.help_contents_item table tr td{
+	border: 1px solid #bdc3c7;
+}
+/*------------------------------*/

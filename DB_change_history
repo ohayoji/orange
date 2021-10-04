@@ -1,0 +1,469 @@
+
+==============フォーマット=================================
+/*-------------------------------------------------*/
+日付			:
+担当者		:
+
+--内容------------------------------
+
+------------------------------------
+
+反映させたさくらDB
+-- turba_test02 / turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+=============================================================
+
+/*-------------------------------------------------*/
+日付			:2015/06/12
+担当者		:川口
+
+--内容------------------------------
+staff_infoビューのカラムに
+`staffs`.`deleted` AS `deleted`を追加
+------------------------------------
+
+反映させたさくらDB
+-- turba_test02 / turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+
+/*-------------------------------------------------*/
+日付			:2015/06/22
+担当者		:川口
+
+--内容------------------------------
+salon_pagesのid=3のlocal_nameを「報酬明細」→「売上明細」に変更
+------------------------------------
+
+反映させたさくらDB
+-- turba_test02 / turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+
+/*-------------------------------------------------*/
+日付			:2015/06/29
+担当者		:川口
+
+--内容------------------------------
+①salon_pagesのid=8のlocal_nameを「手当」→「手当管理」に変更
+
+②salon_pagesにレコード追加
+_name       local_name	url
+deduction	給与控除管理	deduction.php
+
+③テーブル「deductions」を作成しレコード登録
+_name	local_name	_order
+kousei	厚生年金		0
+kenkou	健康保険		1
+juumin	住民税		2
+koyou	雇用保険		3
+gensen	源泉徴収		4
+other	その他		5
+
+④テーブル「used_deductions」を作成
+
+------------------------------------
+
+反映させたさくらDB
+-- turba_test02 / turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+
+/*-------------------------------------------------*/
+日付			:2015/07/01
+担当者		:川口
+
+--内容------------------------------
+view usd_deductions_info を作成
+------------------------------------
+
+反映させたさくらDB
+-- turba_test02 / turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+
+/*-------------------------------------------------*/
+日付			:2015/07/02
+担当者		:川口
+
+--内容------------------------------
+①subjects にid=22「welfare(福利厚生費)」を追加
+②subjects にカラム「_order」を追加
+③monthly_reports にカラム「welfare」を追加
+------------------------------------
+
+反映させたさくらDB
+-- turba_test02 / turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+
+/*-------------------------------------------------*/
+日付			:2015/07/09
+担当者		:川口
+
+--内容------------------------------
+salonsのplanカラムをdefault trialに変更
+------------------------------------
+
+反映させたさくらDB
+-- turba_test02 / turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+
+/*-------------------------------------------------*/
+日付			:2015/07/13
+担当者		:石原
+
+--内容------------------------------
+①salonsのreal_admission_dateカラムを削除
+②salonsのcancel_dateをwithdrawal_dateに名称変更
+③chargesテーブルを作成。カラムはid(INT型 PRIMARY), charge_start(DATE型 DEFAULT NULL),
+ charge_end(DATE型 DEFAULT NULL), salon_id(INT型 DEFAULT NULL)
+------------------------------------
+
+反映させたさくらDB
+-- turba_test02 / turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+/*-------------------------------------------------*/
+日付			:2015/08/16
+担当者		:石原
+
+--内容------------------------------
+①salonsにカラムを3つ作成。カラムはrecursion_id(VARCHAR型 DEFAULT NULL), customer_id(VARCHAR型 DEFAULT NULL),
+ , charge_id(VARCHAR型 DEFAULT NULL)
+------------------------------------
+
+反映させたさくらDB
+--  turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+
+/*-------------------------------------------------*/
+日付			:2015/08/22
+担当者		:川口
+
+--内容------------------------------
+salonsテーブルとpre_admission_salonsテーブルに「admission_button_type」カラムを追加
+------------------------------------
+
+反映させたさくらDB
+-- turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+
+/*-------------------------------------------------*/
+日付			:2015/08/25
+担当者		:石原
+
+--内容------------------------------
+pre_admission_salonsテーブルに「company_id」カラムを追加(INT, 長さ11, 符号なし, NULL許可
+, デフォルトNULL)
+------------------------------------
+
+反映させたさくらDB
+-- turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+/*-------------------------------------------------*/
+日付			:2015/08/29
+担当者		:石原
+
+--内容------------------------------
+area_seats_settingテーブルを作成
+カラムはwiki参照
+------------------------------------
+
+反映させたさくらDB
+-- turba_test_db / turba_orange --
+
+**DB反映時に既存サロンのエリア席情報をarea_seats_settingに挿入するコードを実行する
+===================
+insert into area_seats_setting ( area_id, seats, start_date) values (1, 7, '2014-01-01'),(2, 6, '2014-01-01'),(3, 7, '2014-01-01'),(4, 10, '2014-01-01'),(5, 13, '2014-01-01'),(6, 7, '2014-01-01'),(7, 6, '2014-01-01'),(8, 1, '2015-09-05')
+/*---------------------------------------------------*/
+
+/*-------------------------------------------------*/
+日付			:2015/08/29
+担当者		:石原
+
+--内容------------------------------
+area_settingテーブルseatsのデフォルトを7に変更
+------------------------------------
+
+反映させたさくらDB
+-- turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+
+*-------------------------------------------------*/
+日付			:2015/09/04
+担当者		:石原
+
+--内容------------------------------
+salonsテーブルinit_flagのデフォルトを0に変更
+------------------------------------
+
+反映させたさくらDB
+-- turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+
+/*-------------------------------------------------*/
+日付			:2015/09/06
+担当者		:川口
+
+--内容------------------------------
+area_settingテーブル_nameのデフォルトを「メインフロア」に変更
+------------------------------------
+
+反映させたさくらDB
+-- turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+日付			:2015/09/24
+担当者		:石原
+
+--内容------------------------------
+salonsテーブル及びpre_admission_salonsテーブルにカラム"facebook_id"を追加(VARCHAR(100), default NULL)
+------------------------------------
+
+反映させたさくらDB
+-- turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+
+
+
+
+/*---------------------------------------------------*/
+日付			:2017/09/18
+担当者		:川口
+
+--内容------------------------------
+receipt_entriesテーブルにカラム"salon_id"を追加(INT(11), default NULL)
+------------------------------------
+
+反映させたさくらDB
+-- ローカルのみ / turba_test_db / turba_orange --
+*2018-7-21 [turba_orange]追加　川口
+/*---------------------------------------------------*/
+
+
+/*-------------------------------------------------*/
+日付			:2017/09/18
+担当者		:川口
+
+--内容------------------------------
+other_netテーブルを作成
+＊両方使用済み伝票項目を管理するテーブル（net,studentと同じ扱い）
+------------------------------------
+
+反映させたさくらDB
+-- ローカルのみ / turba_test_db --
+
+CREATE TABLE `other_net` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `salon_id` int(11) DEFAULT NULL,
+  `rec_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `rec_id` (`rec_id`,`salon_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*---------------------------------------------------*/
+
+/*-------------------------------------------------*/
+日付			:2017/09/18
+担当者		:川口
+
+--内容------------------------------
+rec_info_41にother_netカラムを追加
+------------------------------------
+
+反映させたさくらDB
+-- ローカルのみ  / turba_test_db --
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `rec_info_41`
+AS SELECT
+   `receipts_41`.`id` AS `rec_id`,
+   `receipts_41`.`start` AS `start`,
+   `receipts_41`.`end` AS `end`,
+   `receipts_41`.`staff_id` AS `staff_id`,
+   `receipts_41`.`costomer` AS `costomer`,
+   `receipts_41`.`num_visit` AS `num_visit`,
+   `receipts_41`.`seat` AS `seat`,
+   `receipts_41`.`area_id` AS `area_id`,
+   `receipts_41`.`memo` AS `memo`,
+   `receipts_41`.`come` AS `come`,
+   `receipts_41`.`out_` AS `out_`,
+   `receipts_41`.`bag` AS `bag`,
+   `receipts_41`.`pay_type` AS `pay_type`,
+   `receipts_41`.`tec_disc` AS `tec_disc`,
+   `receipts_41`.`pro_disc` AS `pro_disc`,
+   `receipts_41`.`tec_sale` AS `tec_sale`,
+   `receipts_41`.`pro_sale` AS `pro_sale`,
+   `receipts_41`.`rec_comp` AS `rec_comp`,
+   `receipts_41`.`rem_comp` AS `rem_comp`,
+   `net`.`id` AS `net_id`,
+   `student`.`id` AS `student_id`,
+   `other_net`.`id` AS `other_net_id`,
+   `free`.`id` AS `free_id`,
+   `free`.`value` AS `free_v`,
+   `point`.`id` AS `point_id`,
+   `point`.`value` AS `point_v`,
+   `pro_rem`.`id` AS `pro_rem_id`,
+   `pro_rem`.`value` AS `pro_rem_v`,
+   `tec_rem`.`id` AS `tec_rem_id`,
+   `tec_rem`.`value` AS `tec_rem_v`,
+   `staffs`.`_name` AS `staff_name`,
+   `staffs`.`icon` AS `staff_icon`,
+   `staffs`.`color` AS `staff_color`
+FROM ((((((((`receipts_41` join `staffs` on((`receipts_41`.`staff_id` = `staffs`.`id`))) left join `net` on(((`net`.`salon_id` = 41) and (`net`.`rec_id` = `receipts_41`.`id`)))) left join `student` on(((`student`.`salon_id` = 41) and (`student`.`rec_id` = `receipts_41`.`id`)))) left join `other_net` on(((`other_net`.`salon_id` = 41) and (`other_net`.`rec_id` = `receipts_41`.`id`)))) left join `free` on(((`free`.`salon_id` = 41) and (`free`.`rec_id` = `receipts_41`.`id`)))) left join `point` on(((`point`.`salon_id` = 41) and (`point`.`rec_id` = `receipts_41`.`id`)))) left join `pro_rem` on(((`pro_rem`.`salon_id` = 41) and (`pro_rem`.`rec_id` = `receipts_41`.`id`)))) left join `tec_rem` on(((`tec_rem`.`salon_id` = 41) and (`tec_rem`.`rec_id` = `receipts_41`.`id`)))) order by `receipts_41`.`start`;
+
+
+CREATE VIEW `rec_info_1`
+AS SELECT
+   `receipts_1`.`id` AS `rec_id`,
+   `receipts_1`.`start` AS `start`,
+   `receipts_1`.`end` AS `end`,
+   `receipts_1`.`staff_id` AS `staff_id`,
+   `receipts_1`.`costomer` AS `costomer`,
+   `receipts_1`.`num_visit` AS `num_visit`,
+   `receipts_1`.`seat` AS `seat`,
+   `receipts_1`.`area_id` AS `area_id`,
+   `receipts_1`.`memo` AS `memo`,
+   `receipts_1`.`come` AS `come`,
+   `receipts_1`.`out_` AS `out_`,
+   `receipts_1`.`bag` AS `bag`,
+   `receipts_1`.`pay_type` AS `pay_type`,
+   `receipts_1`.`tec_disc` AS `tec_disc`,
+   `receipts_1`.`pro_disc` AS `pro_disc`,
+   `receipts_1`.`tec_sale` AS `tec_sale`,
+   `receipts_1`.`pro_sale` AS `pro_sale`,
+   `receipts_1`.`rec_comp` AS `rec_comp`,
+   `receipts_1`.`rem_comp` AS `rem_comp`,
+   `net`.`id` AS `net_id`,
+   `student`.`id` AS `student_id`,
+   `other_net`.`id` AS `other_net_id`,
+   `free`.`id` AS `free_id`,
+   `free`.`value` AS `free_v`,
+   `point`.`id` AS `point_id`,
+   `point`.`value` AS `point_v`,
+   `pro_rem`.`id` AS `pro_rem_id`,
+   `pro_rem`.`value` AS `pro_rem_v`,
+   `tec_rem`.`id` AS `tec_rem_id`,
+   `tec_rem`.`value` AS `tec_rem_v`,
+   `staffs`.`_name` AS `staff_name`,
+   `staffs`.`icon` AS `staff_icon`,
+   `staffs`.`color` AS `staff_color`
+FROM ((((((((`receipts_1` join `staffs` on((`receipts_1`.`staff_id` = `staffs`.`id`))) left join `net` on(((`net`.`salon_id` = 1) and (`net`.`rec_id` = `receipts_1`.`id`)))) left join `student` on(((`student`.`salon_id` = 1) and (`student`.`rec_id` = `receipts_1`.`id`)))) left join `other_net` on(((`other_net`.`salon_id` = 1) and (`other_net`.`rec_id` = `receipts_1`.`id`)))) left join `free` on(((`free`.`salon_id` = 1) and (`free`.`rec_id` = `receipts_1`.`id`)))) left join `point` on(((`point`.`salon_id` = 1) and (`point`.`rec_id` = `receipts_1`.`id`)))) left join `pro_rem` on(((`pro_rem`.`salon_id` = 1) and (`pro_rem`.`rec_id` = `receipts_1`.`id`)))) left join `tec_rem` on(((`tec_rem`.`salon_id` = 1) and (`tec_rem`.`rec_id` = `receipts_1`.`id`)))) order by `receipts_1`.`start`;
+/*---------------------------------------------------*/
+
+
+
+/*-------------------------------------------------*/
+日付			:2018/07/29
+担当者		:川口
+
+--内容------------------------------
+rec_info_41からother_netカラムを削除
+------------------------------------
+
+反映させたさくらDB
+-- ローカルのみ  / turba_test_db --
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `rec_info_41`
+AS SELECT
+   `receipts_41`.`id` AS `rec_id`,
+   `receipts_41`.`start` AS `start`,
+   `receipts_41`.`end` AS `end`,
+   `receipts_41`.`staff_id` AS `staff_id`,
+   `receipts_41`.`costomer` AS `costomer`,
+   `receipts_41`.`num_visit` AS `num_visit`,
+   `receipts_41`.`seat` AS `seat`,
+   `receipts_41`.`area_id` AS `area_id`,
+   `receipts_41`.`memo` AS `memo`,
+   `receipts_41`.`come` AS `come`,
+   `receipts_41`.`out_` AS `out_`,
+   `receipts_41`.`bag` AS `bag`,
+   `receipts_41`.`pay_type` AS `pay_type`,
+   `receipts_41`.`tec_disc` AS `tec_disc`,
+   `receipts_41`.`pro_disc` AS `pro_disc`,
+   `receipts_41`.`tec_sale` AS `tec_sale`,
+   `receipts_41`.`pro_sale` AS `pro_sale`,
+   `receipts_41`.`rec_comp` AS `rec_comp`,
+   `receipts_41`.`rem_comp` AS `rem_comp`,
+   `net`.`id` AS `net_id`,
+   `student`.`id` AS `student_id`,
+   `free`.`id` AS `free_id`,
+   `free`.`value` AS `free_v`,
+   `point`.`id` AS `point_id`,
+   `point`.`value` AS `point_v`,
+   `pro_rem`.`id` AS `pro_rem_id`,
+   `pro_rem`.`value` AS `pro_rem_v`,
+   `tec_rem`.`id` AS `tec_rem_id`,
+   `tec_rem`.`value` AS `tec_rem_v`,
+   `staffs`.`_name` AS `staff_name`,
+   `staffs`.`icon` AS `staff_icon`,
+   `staffs`.`color` AS `staff_color`
+FROM (((((((`receipts_41` join `staffs` on((`receipts_41`.`staff_id` = `staffs`.`id`))) left join `net` on(((`net`.`salon_id` = 41) and (`net`.`rec_id` = `receipts_41`.`id`)))) left join `student` on(((`student`.`salon_id` = 41) and (`student`.`rec_id` = `receipts_41`.`id`)))) left join `free` on(((`free`.`salon_id` = 41) and (`free`.`rec_id` = `receipts_41`.`id`)))) left join `point` on(((`point`.`salon_id` = 41) and (`point`.`rec_id` = `receipts_41`.`id`)))) left join `pro_rem` on(((`pro_rem`.`salon_id` = 41) and (`pro_rem`.`rec_id` = `receipts_41`.`id`)))) left join `tec_rem` on(((`tec_rem`.`salon_id` = 41) and (`tec_rem`.`rec_id` = `receipts_41`.`id`)))) order by `receipts_41`.`start`;
+
+
+CREATE VIEW `rec_info_1`
+AS SELECT
+   `receipts_1`.`id` AS `rec_id`,
+   `receipts_1`.`start` AS `start`,
+   `receipts_1`.`end` AS `end`,
+   `receipts_1`.`staff_id` AS `staff_id`,
+   `receipts_1`.`costomer` AS `costomer`,
+   `receipts_1`.`num_visit` AS `num_visit`,
+   `receipts_1`.`seat` AS `seat`,
+   `receipts_1`.`area_id` AS `area_id`,
+   `receipts_1`.`memo` AS `memo`,
+   `receipts_1`.`come` AS `come`,
+   `receipts_1`.`out_` AS `out_`,
+   `receipts_1`.`bag` AS `bag`,
+   `receipts_1`.`pay_type` AS `pay_type`,
+   `receipts_1`.`tec_disc` AS `tec_disc`,
+   `receipts_1`.`pro_disc` AS `pro_disc`,
+   `receipts_1`.`tec_sale` AS `tec_sale`,
+   `receipts_1`.`pro_sale` AS `pro_sale`,
+   `receipts_1`.`rec_comp` AS `rec_comp`,
+   `receipts_1`.`rem_comp` AS `rem_comp`,
+   `net`.`id` AS `net_id`,
+   `student`.`id` AS `student_id`,
+   `free`.`id` AS `free_id`,
+   `free`.`value` AS `free_v`,
+   `point`.`id` AS `point_id`,
+   `point`.`value` AS `point_v`,
+   `pro_rem`.`id` AS `pro_rem_id`,
+   `pro_rem`.`value` AS `pro_rem_v`,
+   `tec_rem`.`id` AS `tec_rem_id`,
+   `tec_rem`.`value` AS `tec_rem_v`,
+   `staffs`.`_name` AS `staff_name`,
+   `staffs`.`icon` AS `staff_icon`,
+   `staffs`.`color` AS `staff_color`
+FROM (((((((`receipts_1` join `staffs` on((`receipts_1`.`staff_id` = `staffs`.`id`))) left join `net` on(((`net`.`salon_id` = 1) and (`net`.`rec_id` = `receipts_1`.`id`)))) left join `student` on(((`student`.`salon_id` = 1) and (`student`.`rec_id` = `receipts_1`.`id`)))) left join `free` on(((`free`.`salon_id` = 1) and (`free`.`rec_id` = `receipts_1`.`id`)))) left join `point` on(((`point`.`salon_id` = 1) and (`point`.`rec_id` = `receipts_1`.`id`)))) left join `pro_rem` on(((`pro_rem`.`salon_id` = 1) and (`pro_rem`.`rec_id` = `receipts_1`.`id`)))) left join `tec_rem` on(((`tec_rem`.`salon_id` = 1) and (`tec_rem`.`rec_id` = `receipts_1`.`id`)))) order by `receipts_1`.`start`;
+
+
+/*-------------------------------------------------*/
+日付			:2018/07/29
+担当者		:川口
+
+--内容------------------------------
+other_netテーブルを削除
+------------------------------------
+
+反映させたさくらDB
+-- ローカルのみ / turba_test_db --
+/*---------------------------------------------------*/
+
+
+
+/*---------------------------------------------------*/
+日付			:2018/07/29
+担当者		:川口
+
+--内容------------------------------
+receipt_entriesテーブルのカラム"salon_id"を削除
+------------------------------------
+
+反映させたさくらDB
+-- ローカルのみ / turba_test_db / turba_orange --
+/*---------------------------------------------------*/
+
+/*---------------------------------------------------*/
+日付			:2018/07/29
+担当者		:川口
+
+--内容------------------------------
+receipt_entriesのレコード"other_net"を削除
+------------------------------------
+
+反映させたさくらDB
+-- ローカルのみ / turba_test_db --
+/*---------------------------------------------------*/

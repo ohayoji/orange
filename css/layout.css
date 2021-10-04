@@ -1,0 +1,516 @@
+@CHARSET "UTF-8";
+
+@MEDIA screen and (min-width:375px)  {
+	/*--receipt.css--*/
+	.pro_icon{
+	display: block;
+	}
+	/*----------------*/
+
+
+}
+
+@MEDIA screen and (min-width:480px)  {
+	/*==base====================*/
+	.contents_area01.rec_disp{
+	width: 451.2px;
+	}
+
+	/*--header--*/
+	/*#first_box{
+	width: 30%;
+	float: left;
+	padding: 12px;
+	}
+	#second_box{
+	width: 60%;
+	float: right;
+	}
+	#post_name{
+	text-align: left;
+	}*/
+	/*#page_title{
+	font-size: 16px;
+	}*/
+	/*#icon_area .header_icon{
+
+	}*/
+	/*----------*/
+
+	/*==========================*/
+
+	/*-------home.css------*/
+	#home_nav_tab{
+	display: none;
+	}
+	#home_header nav#nav1{
+	display: block;
+	margin-top: 6px;
+	}
+	#home_header nav#nav2{
+	display: none;
+	}
+	#smartphone_view_images figure{
+	width: 25%;
+	}
+	#pc_view_images figure{
+	width: 33.3%;
+	float: left;
+	}
+	.middle_contents img{
+	width: 223.2px;
+	}
+	.middle_contents_small .img_box{
+	width: 42px;
+	}
+	.middle_contents_small .str_box{
+	float: left;
+	padding-left: 12px;
+	}
+	.home_center_contents_box{
+	width: 401.76px;
+	}
+	.feature_report_contents_image{
+	width: 412.5px;
+	}
+	/*------------------------*/
+	/*--help.css--------------*/
+	#help_category_tab li{
+	width: 150px;
+	}
+	/*--------------------------*/
+
+	/*---top---*/
+	#time_colmun{
+	width: 15%;
+	}
+	#reserv_alea{
+	width: 85%;
+	}
+	/*------*/
+
+	/*----月報一覧表示------*/
+	#title_table{
+	width: 20%;
+	}
+	#data_table_area{
+	width: 80%;
+	margin-left: 20%;
+	}
+	/*--------------------*/
+
+
+
+	/*--レポートテーブル-------------*/
+	#title_table, #name_table{
+	width: 26%;
+	}
+	#data_table_area{
+	width: 74%;
+	margin-left: 26%;
+	}
+	/*#data_table{
+	width: 500px;
+	}*/
+	/*------------------------------*/
+
+	/*--salon_settting.php--*/
+	#pro_setting table input._name,
+	#usg_m_detail table input._name{
+	width: auto !important;
+	}
+	/*-----------------*/
+
+	/*--receipt_list.php--*/
+	.start_end{
+	float: left;
+	}
+	/*---------------------*/
+}
+@MEDIA screen and (min-width:640px)  {
+	/*--レポートテーブル-------------*/
+	#title_table, #name_table{
+	width: 20%;
+	}
+	#data_table_area{
+	width: 80%;
+	margin-left: 20%;
+	}
+	#data_table{
+	width: 100%;
+	}
+	/*------------------------------*/
+}
+@MEDIA screen and (min-width:768px)  {
+	/*==mmenu========================*/
+	/*name=defaultのnav_tabは非表示
+	(非表示にしたくない場合は各コントローラーでリネームする)*/
+	#nav_tab[name=default]{
+	display: none;
+	}
+	/*================================*/
+
+	/*--init_setting.php-------*/
+	.init_page_contents {
+  	width: 500px !important;
+	}
+	/*-------------------------*/
+
+	/*--items.css----------------------*/
+	.menu_icon.receipt{
+	width: 56px !important;
+	}
+	/*-----------------------------------*/
+
+	/*--reserve.css--------------*/
+	#time_colmun{
+	width: 10%;
+	}
+	#reserv_alea{
+	width: 90%;
+	}
+	/*#reserv_alea table tr td,
+	#time_table tr td{
+	height: 44px;
+	}*/
+	.top_nav select,
+	.top_nav a{
+	font-size: 16px;
+	}
+	.top_nav .button01{
+	font-size: 14px;
+	}
+	.panel{
+	font-size: 14px;
+	}
+	/*---------------------------------*/
+
+	/*--receipt.css-----*/
+	#receipt_area{
+	width: 752.64px;
+	margin: auto;
+	/*font-size: 16px;*/
+	}
+	#menu_list,
+	#rec_entries,
+	#detail,
+	.total_contents,
+	#memo_area{
+	padding: 12px;
+	}
+	#selected_menus td,
+	#selected_products td{
+	font-size: 18px;
+	padding: 12px;
+	}
+	#selected_products .pro_sel {
+	width: 200px;
+	}
+	#selected_menus .del_icon img,
+	#selected_products .del_icon img{
+	width: 28px !important;
+	height: 28px !important;
+	}
+	#total_contents_area .total_contents{
+	width: 348px;
+	}
+	#total_contents_area .total_contents.tec{
+	float: left;
+	}
+	#total_contents_area .total_contents.pro{
+	float: right;
+	}
+	/*------------------*/
+
+	/*---リスト（dl）------*/
+	.dr_list, .sts_list{
+	width: 49%;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	margin-top: 2px;
+	float: left;
+	}
+	/*--------------*/
+
+	/*--レポートテーブル-------------*/
+	#title_table, #name_table{
+	width: 15%;
+	}
+	#data_table_area{
+	width: 85%;
+	margin-left: 15%;
+	}
+	/*--------------------*/
+
+
+
+	/*-------home.css------*/
+	#main_alea.landing/*, #top_image*/{
+	width: 752.64px;
+	}
+	#top_message{
+	font-size: 18px;
+	}
+	.middle_contents.flex{
+	float: left;
+	width: 33.3%;
+	margin: 24px 0;
+	}
+	.middle_contents.flex .contents_area{
+	width: 92%;
+	}
+	.middle_contents.flex img{
+	width: 196px;
+	}
+	.middle_contents p.heading{
+	height: 56px;
+	}
+	.middle_contents p.heading, .middle_contents p.statement{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	.middle_contents_small.flex{
+	width: 50%;
+	height: 174px;
+	float: left;
+	padding: 12px 0;
+	}
+	.home_contents img.big_img:not(.help_img){
+	width: 768px;
+	margin: auto;
+	}
+	.home_contents .long_message_box{
+	text-align: center;
+	font-size: 16px;
+	}
+	.home_center_contents_box:not(.simuration){
+	width: 410px;
+	}
+	.home_center_contents_box.simuration{
+	width: 600px;
+	}
+	.feature_report_contents_text{
+	width: 48%;
+	float: left;
+	}
+	.feature_report_contents_image{
+	width: 48%;
+	padding: 0;
+	float: right;
+	}
+	#feature_multipaytype_table{
+	width: 750px !important;
+	margin: auto;
+	}
+	#plan_box_area{
+	width: 700px;
+	margin: auto;
+	}
+	.plan_box{
+	width: 330px;
+	margin-left: 14px;
+	float: left;
+	}
+	#simuration td .start_date,
+	#simuration td .end_date{
+	float: left;
+	}
+	/*#simuration td .start_date{
+	margin-left: 96px;
+	}*/
+	/*-------------------------*/
+
+	/*--help.css---------------------*/
+	.help_entry .contents_area{
+	width: 752px;
+	}
+	.help_contents .conbox img:not(big_img){
+	float: left;
+	margin-right: 12px;
+	}
+
+	/*--helpフォルダ内help.css--*/
+	#help_index{
+	width: 34%;
+	float: right;
+	padding-right: 12px;
+	border-right: 1px solid #cccccc;
+	}
+	#help_contents{
+	/*padding: 12px 24px;*/
+	width: 60%;
+	float: right;
+	padding-left: 12px;
+	}
+	/*------------------------*/
+	/*--------------------------------*/
+
+	/*----admission--------*/
+	#admission_area{
+	width: 768px;
+	margin: auto;
+	}
+	#messe_box{
+	width: 50%;
+	float: right;
+	}
+	#messe_box img{
+	margin-top: 100px;
+	width: 300px;
+	}
+	#admission_form{
+	width: 40%;
+	padding: 5%;
+	float: left;
+	}
+	/*---------------------------*/
+
+	/*--slide_vertical.css-----------*/
+	.my_slide{
+	width: 526.8px !important;
+	right: 5.37px !important;
+	}
+	/*-------------------------------*/
+}
+@MEDIA screen and (min-width:1024px)  {
+	/*base*/
+	/*.contents_area{ width: 1003.52px;}*/
+
+	/*==mmenu========================*/
+	#nav_tab[name=staff_report]{
+	display: none;
+	}
+	/*================================*/
+
+	/*==list.css=============================*/
+	/*--payment_change_btn--*/
+	input.payment_change_btn{
+	font-size: 12px !important;
+	}
+	/*-------------------------*/
+	.list_area,
+	.group_list_area,
+	.contents_area.with_list_area{
+  	width: 700px;
+  	margin: auto;
+	}
+	.list_area dl dt{
+	margin-bottom: 12px;
+	}
+	.group_list_area > dl > dt{
+	margin-top: 24px;
+	border: 1px solid #cccccc;
+	/*border-bottom: none;*/
+
+	-webkit-border-radius: 4px 4px 0 0;	/* Safari、Google Chrome */
+    -moz-border-radius: 4px 4px 0 0;	/* Firefox */
+	}
+	.group_list_area > dl > dd{
+	padding: 24px;
+	border: 1px solid #cccccc;
+	border-top: none;
+	}
+	.group_list_area > dl > dd:not(.middle_dd){
+	-webkit-border-radius: 0 0 4px 4px;	/* Safari、Google Chrome */
+    -moz-border-radius: 0 0 4px 4px;	/* Firefox */
+	}
+	.list_area dl dd,
+	.list_area dl dd.staff_list,
+	.group_list_area > dl > dd > ul > li:not(.total):not(.child_list_area){
+  	border: 1px solid #cccccc;
+  	float: left;
+  	margin: 4px;
+  	/*background-color: #f2f2f2;*/
+
+  	box-shadow: 2px 2px 1px -0px #f2f2f2;
+  	-webkit-border-radius: 4px;	/* Safari、Google Chrome */
+    -moz-border-radius: 4px;	/* Firefox */
+	}
+	.group_list_area > dl > dd > ul > li:not(.total):not(.child_list_area){
+	width: 290px;
+	}
+	.list_area dl dd,
+	.list_area dl dd.staff_list{
+	width: 314px;
+	}
+	.child_list_area dl dd li{
+	border: 1px solid #cccccc;
+  	width: 284px;
+  	float: left;
+  	margin: 4px;
+	}
+	/*===================================*/
+
+	/*top*/
+	#time_colmun{
+	width: 8%;
+	}
+	#reserv_alea{
+	width: 92%;
+	}
+
+    .big_content_box{
+    width: 471.76px;
+    }
+
+    /*---リスト（dl）------*/
+	.dr_list, .sts_list{
+	width: 32%;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	float: left;
+	}
+	/*--------------*/
+
+    /*----月報一覧表示------*/
+	#title_table{
+	width: 10%;
+	}
+	#data_table_area{
+	width: 90%;
+	margin-left: 10%;
+	}
+	/*--------------------*/
+
+	/*-------home.css------*/
+	#main_alea.landing,
+	.home_contents > .contents_area{
+	width: 1003.52px;
+	}
+	.middle_contents.flex img{
+	width: 70%;
+	}
+	.middle_contents_small.flex{
+	height: 140px;
+	}
+	/*-------------------------*/
+
+	/*--helpフォルダ内help.css----------*/
+	.help_contents_item .conbox img:not(big_img){
+	float: left;
+	margin-right: 12px;
+	}
+	/*------------------------------------*/
+}
+
+@MEDIA screen and (min-width:1200px) {
+	/*==list.css=============================*/
+	.list_area,
+	.group_list_area,
+	.contents_area.with_list_area{
+  	width: 826px;
+	}
+	.list_area dl dd,
+	.list_area dl dd.staff_list{
+	width: 378px;
+	}
+	.group_list_area > dl > dd > ul > li:not(.total):not(.child_list_area){
+  	width: 352px;
+	}
+
+	.child_list_area dl dd li{
+  	width: 346px;
+	}
+	/*===================================*/
+}

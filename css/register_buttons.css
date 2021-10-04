@@ -1,0 +1,37 @@
+div#register_buttons{
+  text-align: center;
+}
+
+#register_buttons button.register_sub{
+  width: 250px;
+  margin: 12px;
+  color: #fff;
+}
+
+#register_buttons button#rgstr_cash{
+  background-color: #379cbf;
+}
+#register_buttons button#rgstr_card{
+  background-color: #a3c600;
+}
+
+#register_buttons button span{
+
+}
+#register_buttons button span.icon{
+  font-size: 48px;
+}
+#register_buttons button span.text{
+  font-size: 18px;
+}
+
+@MEDIA screen and (min-width:768px){
+
+  #register_buttons button.register_sub{
+    width: 220px;
+    padding: 12px;
+  }
+  #register_buttons button span{
+    display: block;
+  }
+}

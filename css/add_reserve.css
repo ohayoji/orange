@@ -1,0 +1,43 @@
+@CHARSET "utf-8";
+#reserv_input{
+	width: 98%;
+	margin-right: auto;
+	margin-left: auto;
+}
+#reserv_input td{
+	text-align: center;
+	width: 20%;
+	padding: 6px;
+	border-bottom: 1px solid #95a5a6;
+	overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+#reserv_input #costomer,
+#reserv_input #tec_sale,
+#reserv_input #point{
+	width: 150px;
+	border-bottom: 1px solid #cccccc;
+}
+#reserv_input .icon{
+	float: left;
+	width: 36px;
+	padding: 2px;
+	height: auto;
+}
+#reserv_input .icon img {
+	width: 100%;
+}
+#reserv_input .icon p{
+	font-size: 10px;
+}
+#reserv_input #memo{
+	width: 100%;
+	background-color: #f8f5e4;
+	border: none;
+	resize: none;
+	font-size: 14px;
+}
+/*#reserv_input tr td input{
+	text-align: right;
+}*/
