@@ -3,6 +3,7 @@ if(!isset($_SESSION)){
  session_start();
 }
 header("Content-Type: text/html; charset=UTF-8");
+require_once '../env.php';
 require_once 'MySQL.php';
 require_once 'StringManager.php';
 
@@ -41,65 +42,6 @@ class RootModel extends MySQL {
 	//ユーザー登録時のパラメータなどに利用するランダム文字列の文字数定義
 	const STR_LENGTH = 12;
 
-	/*== URL / メールアドレス　(テスト用と本番用で切り替える)=====================================================
-	 * 開発時のローカルサーバーではとりあえずdummy-dummyにしておく
-	 * ==================================================================================*/
-
-
-	/*-- orange_stg (さくらSTGディレクトリ)-----------*/
-	// //ホームページ
-	// const URL_HOME_PAGE = "http://turba.sakura.ne.jp/orange_stg/";
-	// //登録ページ
-	// const URL_ADD_COMP = "http://turba.sakura.ne.jp/orange_stg/admission_comp.php";
-	// //パスワード再発行ページ
-	// const URL_PASS_REISSUE = "http://turba.sakura.ne.jp/orange_stg/password_reissue.php";
-	// //ログインページ
-	// const URL_LOGIN = "http://turba.sakura.ne.jp/orange_stg/pages/login.php";
-	// //スタッフサインアップページ
-	// const URL_SIGNUP = "http://turba.sakura.ne.jp/orange_stg/signup.php";
-	// //送信専用メールアドレス
-	// const POSTING_SENDER = "kawaguchi@turba-hm.com";
-	// //メインメールアドレス
-	// const MAIN_SENDER = "kawaguchi@turba-hm.com";
-	/*------------------------*/
-
-  /*-- Docker mysql57-----------*/
-	//ホームページ
-	const URL_HOME_PAGE = "http://localhost:8080/";
-	//登録ページ
-	const URL_ADD_COMP = "http://localhost:8080/admission_comp.php";
-	//パスワード再発行ページ
-	const URL_PASS_REISSUE = "http://localhost:8080/password_reissue.php";
-	//ログインページ
-	const URL_LOGIN = "http://localhost:8080/pages/login.php";
-	//スタッフサインアップページ
-	const URL_SIGNUP = "http://localhost:8080/signup.php";
-	//送信専用メールアドレス
-	const POSTING_SENDER = "rivermouth1103+dummy_1@gmail.com";
-	//メインメールアドレス
-	const MAIN_SENDER = "rivermouth1103+dummy_1@gmail.com";
-	/*------------------------*/
-
-	/*-- Orange01.jp (一般公開本番ディレクトリ)---------------------*/
-	// //ホームページ
-	// const URL_HOME_PAGE = "https://orange01.jp/";
-	// //登録ページ
-	// const URL_ADD_COMP = "https://orange01.jp/admission_comp.php";
-	// //パスワード再発行ページ
-	// const URL_PASS_REISSUE = "https://orange01.jp/password_reissue.php";
-	// //ログインページ
-	// const URL_LOGIN = "https://orange01.jp/pages/login.php";
-	// //スタッフサインアップページ
-	// const URL_SIGNUP = "https://orange01.jp/signup.php";
-	// //送信専用メールアドレス
-	// const POSTING_SENDER = "posting@orange01.jp";
-	// //メインメールアドレス
-	// const MAIN_SENDER = "posting@orange01.jp";
-	/*----------------------------------*/
-
-
-	/*=================================================================================*/
-
 
 	/*==WebPay APIキー============================================================*/
 	/*--川口テスト環境-------------------*/
@@ -115,6 +57,22 @@ class RootModel extends MySQL {
 	const WP_SECRET_KEY = "live_secret_2hJd9i2ozdSi0tb70B2IR0JR";*/
 	/*-------------------------------*/
 	/*===================================================================================*/
+    
+    
+    //ホームページ
+	const URL_HOME_PAGE = env['URL_HOME_PAGE'];
+	//登録ページ
+	const URL_ADD_COMP = env['URL_ADD_COMP'];
+	//パスワード再発行ページ
+	const URL_PASS_REISSUE = env['URL_PASS_REISSUE'];
+	//ログインページ
+	const URL_LOGIN = env['URL_LOGIN'];
+	//スタッフサインアップページ
+	const URL_SIGNUP = env['URL_SIGNUP'];
+	//送信専用メールアドレス
+	const POSTING_SENDER = env['POSTING_SENDER'];
+	//メインメールアドレス
+	const MAIN_SENDER = env['MAIN_SENDER'];
 
 	function __construct() {
 

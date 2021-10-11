@@ -1,42 +1,12 @@
 <?php
+require_once '../env.php';
 class MySQL {
+      
+    const MY_SERVER = env['MY_SERVER']; //docker-compose.ymlのlinksで指定している名前が使用できる
+	const USER_NAME = env['USER_NAME'];
+	const PASSWORD = env['PASSWORD'];
+	const DB_NAME = env['DB_NAME'];
 
-	// //Macローカルサーバー
-	// const MY_SERVER = "127.0.0.1";//yosemiteアップグレード時に変更
-	// const USER_NAME = 'root';
-	// const PASSWORD = 'komazawa';
-	// const DB_NAME = "salon_management_app";
-
-  //Dockerサーバー
-	// const MY_SERVER = "0.0.0.0:3307"; // <-macから見た場合のホストなのでwebコンテナからは使用できない
-  const MY_SERVER = "db"; //docker-compose.ymlのlinksで指定している名前が使用できる
-	const USER_NAME = 'root';
-	const PASSWORD = 'QazxSw';
-	const DB_NAME = "turba_orange";
-
-	// dummy-01 (2015.04.19スタートの社内運用用サーバー)
-    // const MY_SERVER = "mysql504.db.sakura.ne.jp";
-    // const USER_NAME = 'turba';
-    // const PASSWORD = 'komazawa_test01';
-    // const DB_NAME = "turba_test_db";
-
-	// Orange01.jp (一般公開本番サーバー)
-	/*const MY_SERVER = "mysql504.db.sakura.ne.jp";
-	 const USER_NAME = 'turba';
-	 const PASSWORD = 'komazawa_test01';
-	 const DB_NAME = "turba_orange";*/
-
-   // 2018新DB 本番
- 	 // const MY_SERVER = "mysql635.db.sakura.ne.jp";
- 	 // const USER_NAME = 'turba';
- 	 // const PASSWORD = 'komazawa_test01';
- 	 // const DB_NAME = "turba_orange";
-
-   // 2018新DB STG
- 	 // const MY_SERVER = "mysql635.db.sakura.ne.jp";
- 	 // const USER_NAME = 'turba';
- 	 // const PASSWORD = 'komazawa_test01';
- 	 // const DB_NAME = "turba_orange_test";
 
 	//mysqliインスタンス生成メソッド
 	public static function _createMysqli() {
