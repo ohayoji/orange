@@ -1,5 +1,5 @@
 <?php
-require_once '../PHPClass/RecDisplayModel.php';
+require_once __DIR__.'/../PHPClass/RecDisplayModel.php';
 $model = new RecDisplayModel();
 ?>
 <!DOCTYPE html>

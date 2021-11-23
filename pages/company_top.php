@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
  session_start();
 }
-require_once '../PHPClass/CompanyTopModel.php';
+require_once __DIR__.'/../PHPClass/CompanyTopModel.php';
 $model = new CompanyTopModel();
 ?>
 <!DOCTYPE html>

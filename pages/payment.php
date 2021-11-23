@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
  session_start();
 }
-require_once '../PHPClass/PaymentModel.php';
+require_once __DIR__.'/../PHPClass/PaymentModel.php';
 $model = new PaymentModel();
 
 ?>

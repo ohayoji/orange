@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
  session_start();
 }
-require_once '../PHPClass/StaffSettingModel.php';
+require_once __DIR__.'/../PHPClass/StaffSettingModel.php';
 $model = new StaffSettingModel();
 ?>
 <!DOCTYPE html>

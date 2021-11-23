@@ -2,8 +2,8 @@
 if(!isset($_SESSION)){
  session_start();
 }
-require_once '../PHPClass/StaffReportModel.php';
-require_once '../PHPClass/CompanySettingModel.php';
+require_once __DIR__.'/../PHPClass/StaffReportModel.php';
+require_once __DIR__.'/../PHPClass/CompanySettingModel.php';
 //$test = RootModel::_getWhereStr_salonIDs([1, 2, 3]);
 //POST処理
 if(!empty($_POST["salon"])){

@@ -1,5 +1,5 @@
 <?php
-require_once '../env.php';
+require_once __DIR__.'/../env.php';
 class MySQL {
       
     const MY_SERVER = env['MY_SERVER']; //docker-compose.ymlのlinksで指定している名前が使用できる

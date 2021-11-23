@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
  session_start();
 }
-require_once '../PHPClass/ReceiptModel.php';
+require_once __DIR__.'/../PHPClass/ReceiptModel.php';
 $model = new ReceiptModel();
 ?>
 <!DOCTYPE html>

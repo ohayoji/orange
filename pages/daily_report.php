@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
  session_start();
 }
-require_once '../PHPClass/DailyReportModel.php';
+require_once __DIR__.'/../PHPClass/DailyReportModel.php';
 $model = new DailyReportModel();
 ?>
 <!DOCTYPE html>

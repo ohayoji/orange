@@ -1,5 +1,5 @@
 <?php
-require_once '../PHPClass/PersonalSettingModel.php';
+require_once __DIR__.'/../PHPClass/PersonalSettingModel.php';
 $model = new PersonalSettingModel();
 ?>
 <!DOCTYPE html>

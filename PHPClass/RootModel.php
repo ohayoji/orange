@@ -3,7 +3,7 @@ if(!isset($_SESSION)){
  session_start();
 }
 header("Content-Type: text/html; charset=UTF-8");
-require_once '../env.php';
+require_once __DIR__.'/../env.php';
 require_once 'MySQL.php';
 require_once 'StringManager.php';
 

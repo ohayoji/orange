@@ -1,6 +1,6 @@
 <?php
-require_once '../PHPClass/ReserveModel.php';
-require_once '../PHPClass/CompanySettingModel.php';
+require_once __DIR__.'/../PHPClass/ReserveModel.php';
+require_once __DIR__.'/../PHPClass/CompanySettingModel.php';
 $rootModel = new RootModel();
 if($rootModel->_visiter == "company"){
 

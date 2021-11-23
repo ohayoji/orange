@@ -1,5 +1,5 @@
 <?php
-require_once '../PHPClass/InitSettingModel.php';
+require_once __DIR__.'/../PHPClass/InitSettingModel.php';
 $model = new InitSettingModel();
 ?>
 

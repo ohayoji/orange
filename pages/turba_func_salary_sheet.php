@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
  session_start();
 }
-require_once '../PHPClass/turba_func_SalarySheetModel.php';
+require_once __DIR__.'/../PHPClass/turba_func_SalarySheetModel.php';
 $model = new turba_func_SalarySheetModel();
 ?>
 <!DOCTYPE html>

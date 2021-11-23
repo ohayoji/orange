@@ -1,5 +1,5 @@
 <?php
-require_once '../PHPClass/CreateReportModel.php';
+require_once __DIR__.'/../PHPClass/CreateReportModel.php';
 $model = new CreateReportModel();
 ?>
 <!DOCTYPE html>

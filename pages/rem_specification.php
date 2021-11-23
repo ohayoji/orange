@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
  session_start();
 }
-require_once '../PHPClass/RemSpecificationModel.php';
+require_once __DIR__.'/../PHPClass/RemSpecificationModel.php';
 $model = new RemSpecificationModel();
 ?>
 <!DOCTYPE html>

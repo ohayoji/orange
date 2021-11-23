@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
  session_start();
 }
-require_once '../PHPClass/SalonSettingModel.php';
+require_once __DIR__.'/../PHPClass/SalonSettingModel.php';
 $model = new SalonSettingModel();
 //var_dump($_SESSION);
 ?>

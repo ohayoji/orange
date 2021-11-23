@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
  session_start();
 }
-require_once '../PHPClass/LoginModel.php';
+require_once __DIR__.'/../PHPClass/LoginModel.php';
 ?>
 <!DOCTYPE html>
 <html>
