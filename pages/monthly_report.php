@@ -14,7 +14,7 @@ $model = new MonthlyReportModel();
 <link href="../css/mmenu.css" rel="stylesheet" type="text/css"/>
 <link href="../css/report_table.css" rel="stylesheet" type="text/css"/>
 <script src="../js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/common.js?ver=20190114"></script>
 <script type="text/javascript" src="../js/monthly_report.js"></script>
 <!-- plugins -->
 <link href="../plugin/css/jquery.mmenu.all.css" rel="stylesheet" type="text/css"/>

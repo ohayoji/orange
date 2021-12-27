@@ -12,12 +12,12 @@ $model = new ReceiptModel();
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
 <script src="../js/jquery-2.1.1.min.js"></script>
 
-<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/common.js?ver=20190114"></script>
 <script type="text/javascript" src="../js/string_check.js"></script>
 <script type="text/javascript" src="../js/ViewController/MenuViewController.js"></script>
 <script type="text/javascript" src="../js/ViewController/SelectedMenuRowViewController.js"></script>
 <script type="text/javascript" src="../js/ViewController/MenuDetailCellViewController.js"></script>
-<script type="text/javascript" src="../js/receipt.js?ver=20180816"></script>
+<script type="text/javascript" src="../js/receipt.js?ver=20190114"></script>
 <script type="text/javascript" src="../js/vivo_func.js"></script>
 
 
@@ -25,14 +25,8 @@ $model = new ReceiptModel();
 <link href="../css/items.css" rel="stylesheet" type="text/css"/>
 <link href="../css/mmenu.css" rel="stylesheet" type="text/css"/>
 <link href="../css/receipt.css" rel="stylesheet" type="text/css"/>
-<!--<link href="../css/register_buttons.css" rel="stylesheet" type="text/css"/>-->
 <link href="../css/layout.css" rel="stylesheet" type="text/css"/>
-<!-- plugins -->
-<!--<link href="../plugin/css/jquery.mmenu.all.css" rel="stylesheet" type="text/css"/>
-<link href="../plugin/css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
-      media="all and (min-width: 768px)" />
-<script type="text/javascript" src="../plugin/js/jquery.mmenu.min.all.js"></script>  -->
-<!-- ------- -->
+
 <!-- my_plugins -->
 <link href="../my_plugin/my_receipt_status/my_receipt_status.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../my_plugin/my_receipt_status/my_receipt_status.js"></script>
@@ -86,11 +80,6 @@ $(function(){
 	font-family: mplus;
 	src: url("../css/mplus/mplus-1c-light.ttf") format("truetype");
 }
-/*.seg_contents.pay_type{
-	background-color: rgb(250, 52, 9);
-  color: white;
-  border-radius: 4px;
-}*/
 #pay_type i{
 	font-size: 24px;
 	margin-right: 6px;
@@ -191,7 +180,7 @@ $._createHeader();
 <div id="rec_entries" class="clearfix rec_ent"></div>
 
 <div class="contents_area conttents_title pay_type hide">お支払い</div>
-<div id="pay_type" class="pay_type hide segment02 clearfix">
+<div id="pay_type" class="pay_type hide segment03 clearfix">
 	<div class="seg_contents">
 		<input id="pt_0" type="radio" name="pay_type" value="0">
 		<label for="pt_0">現金</label>
@@ -200,12 +189,10 @@ $._createHeader();
 		<input id="pt_1" type="radio" name="pay_type" value="1">
 		<label for="pt_1">カード</label>
 	</div>
-	<!--<p class="cash">
-		<i class="fa fa-money" aria-hidden="true" style="color:rgb(67, 123, 163)"></i>現金
-	</p>
-	<p class="card hide">
-		<i class="fa fa-credit-card" aria-hidden="true" style="color:rgb(67, 163, 89)"></i>カード
-	</p>-->
+  <div class="seg_contents">
+		<input id="pt_2" type="radio" name="pay_type" value="2">
+		<label for="pt_2">電子マネー</label>
+	</div>
 </div>
 
 
@@ -284,22 +271,6 @@ $._createHeader();
 
 <div class="button_box" id="receipt_buttons">
 <input type="button" id="register_sub" class="submit_button" value="お会計をする">
-<!--<input type="button" class="submit_button register_sub" value="現金でお会計">
-<input type="button" class="submit_button register_sub" value="カードでお会計">-->
-<!--<div id="register_buttons">
-	<button type="button" class="register_sub" id="rgstr_cash">
-		<span class="icon">
-			<i class="fa fa-money" aria-hidden="true"></i>
-		</span>
-		<span class="text">現金でお会計</span>
-	</button>
-	<button type="button" class="register_sub" id="rgstr_card">
-		<span class="icon">
-			<i class="fa fa-credit-card" aria-hidden="true"></i>
-		</span>
-		<span class="text">カードでお会計</span>
-	</button>
-</div>-->
 <input type="button" id="pre_sub" class="sub_button"
 	value="仮登録" style="display: none">
 <input type="button" id="staff_edit_sub" class="submit_button"

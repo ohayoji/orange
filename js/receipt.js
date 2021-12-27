@@ -106,15 +106,6 @@ jQuery(function ($) {
 		payTypeContents.show();
 		//チェっっく
 		payTypeContents.find("input[value="+ _receipt.pay_type +"]").prop("checked",true);
-
-		/*if (_receipt.pay_type == 1) {
-			$("#pay_type p").toggle();
-		}*/
-
-		/*//スタッフログイン時は変更不可に
-		if (_staffEditFlag == "YES") {
-			payTypeContents.find("input").prop("disabled",true);
-		}*/
 	}
 
 	/*===================================================*/
@@ -226,9 +217,6 @@ jQuery(function ($) {
 		$("#register_sub").on("click",function(){
 			if ($.recSubCheck()) { $.sendAllData("register_sub"); }
 		});
-		/*$(".register_sub").on("click",function(){
-			if ($.recSubCheck()) { $.sendAllData($(this).attr("id")); }
-		});*/
 	}
 	//仮登録許可
 	if (_preSubFlag == "YES") {

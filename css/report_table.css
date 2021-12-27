@@ -13,13 +13,13 @@
 .report_table tr td.title{
 	font-size: 14px;
 	text-align: center;
-	
+
 	overflow: hidden;
  	white-space: nowrap;
  	text-overflow: clip;
  	-webkit-text-overflow: clip;
  	-o-text-overflow: clip;
- 	
+
  	max-width: 70px;
 }
 .report_table tr td.amount{
@@ -34,6 +34,10 @@
 	font-weight: bold;
 	text-align: center;
 }
+.report_table .detail_amount{
+	font-size: 14px;
+  color: #7f8c8d;
+}
 
 /*--------------------------------------*/
 #report_list_area{
@@ -42,7 +46,7 @@
 }
 #report_list_area table tr th,
 #data_table_area table tr th{
-	height: 28px;
+	height: 40px;
 }
 #report_list_area table tr td,
 #data_table_area table tr td{
@@ -58,7 +62,7 @@
 #title_table, #name_table{
 	width: 30%;
 	box-shadow: 5px 0 6px -6px #777777;
-	
+
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -68,7 +72,7 @@
 #data_table_area{
 	width: 70%;
 	margin-left: 30%;
-	
+
 	overflow: auto;
 	-webkit-overflow-scrolling: touch;
 }

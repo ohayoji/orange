@@ -12,7 +12,7 @@ $model = new CompanyTopModel();
 <link rel="apple-touch-icon" href="../image/4cube.png" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
 <script src="../js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/common.js?ver=20190114"></script>
 <script type="text/javascript" src="../js/company_top.js"></script>
 
 <link href="../css/base.css" rel="stylesheet" type="text/css"/>

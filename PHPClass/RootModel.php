@@ -291,7 +291,8 @@ class RootModel extends MySQL {
 
 		$colStr = "SUM(tec_sale) AS tec_total,SUM(pro_sale) AS pro_total,
 				SUM(CASE WHEN pay_type=0 THEN tec_sale+pro_sale ELSE 0 END) AS cash_total,
-				SUM(CASE WHEN pay_type=1 THEN tec_sale+pro_sale ELSE 0 END) AS card_total";
+				SUM(CASE WHEN pay_type=1 THEN tec_sale+pro_sale ELSE 0 END) AS card_total,
+        SUM(CASE WHEN pay_type=2 THEN tec_sale+pro_sale ELSE 0 END) AS e_money_total";
 		$whereStr = "EXTRACT(YEAR_MONTH FROM start)=".$month.
 					" AND rec_comp=1";
 
@@ -475,8 +476,10 @@ class RootModel extends MySQL {
 		SUM(tec_sale) AS tec_sale,SUM(pro_sale) AS pro_sale,
 		SUM(CASE WHEN pay_type=0 THEN tec_sale ELSE 0 END) AS cash_tec,
 		SUM(CASE WHEN pay_type=1 THEN tec_sale ELSE 0 END) AS card_tec,
+    SUM(CASE WHEN pay_type=2 THEN tec_sale ELSE 0 END) AS e_money_tec,
 		SUM(CASE WHEN pay_type=0 THEN pro_sale ELSE 0 END) AS cash_pro,
 		SUM(CASE WHEN pay_type=1 THEN pro_sale ELSE 0 END) AS card_pro,
+    SUM(CASE WHEN pay_type=2 THEN pro_sale ELSE 0 END) AS e_money_pro,
 		COUNT(id) AS count
 		 FROM receipts_".$salonId.
 		" WHERE rec_comp=1 GROUP BY DATE_FORMAT(start, '%Y-%m-%d'),DAYNAME(start)

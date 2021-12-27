@@ -3,7 +3,7 @@ require_once 'RootModel.php';
 class PaymentModel extends RootModel{
 
 	//月セレクタでさかのぼる月数
-	const MON_COUNT = 12;
+	const MON_COUNT = 13;
 	//月リスト
 	var $monthDatas;
 	//スタッフリスト

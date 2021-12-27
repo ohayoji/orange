@@ -1,10 +1,10 @@
 /**
- * 
+ *
  */
 jQuery(function ($) {
-	
-	
-	
+
+	// console.log('_staffReport', _staffReport);
+
 	/*--月セレクタ----------------*/
 	var select = $("select[name=month]");
 	//月セレクタ初期設定
@@ -14,7 +14,7 @@ jQuery(function ($) {
 	select.val(_monthCondition);
 	/*------------------------------*/
 	//サロンセレクタ
-	
+
 	if (_visiter == "company") {
 		$("#salon_sel_area").css("display","block");
 		//value0だとpostされない仕様みたいです
@@ -26,7 +26,7 @@ jQuery(function ($) {
 		});
 		$("select[name=salon]").val(_salon);
 	}
-	
+
 	/*--レポート表示----------------------*/
 	var nameTable = $("#name_table");
 	var dataTable = $("#data_table");
@@ -51,6 +51,10 @@ jQuery(function ($) {
 			}
 			dataTable.append($("<tr>")
 				.append($("<td>").attr("class","ta_right orange").text($.delimiting(val.total_sale)))
+        .append($("<td>").attr("class","ta_right").append(
+          $('<span class="detail_amount">' + $.delimiting(val.tec_sale) + '</span>')))
+          .append($("<td>").attr("class","ta_right").append(
+            $('<span class="detail_amount">' + $.delimiting(val.pro_sale) + '</span>')))
 				.append($("<td>").attr("class","ta_right f_14").text($.delimiting(val.salary)))
 				.append($("<td>").attr("class","ta_right f_14").text($.delimiting(val.total_inc)))
 				.append($("<td>").attr("class","ta_right f_14").text($.delimiting(val.add_rem)))
@@ -67,7 +71,7 @@ jQuery(function ($) {
 		$("#no_message").css("display","block");
 		$("p.detail").css("display","none");
 	}
-	
+
 	/*-----------------------------------*/
 });
 (function($) {

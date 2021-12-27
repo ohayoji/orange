@@ -27,7 +27,7 @@ var CURRENCY = "¥";
 
 jQuery(function ($) {
 	//visiterがない場合は強制ログアウト
-	
+
 	if (typeof(_sessionCheckCancel) == "undefined") {
 		if (!_visiter) {
 			alert("ログインされていないか、セキュリティ保護のためログアウトしました。もう一度ログインしてください。");
@@ -62,7 +62,7 @@ jQuery(function ($) {
 			}
 
 			/*$("#menu ul li a").each(function(index, element){
-				
+
 				var img = $("<img>").attr("src","../image/Lock Filled-100.png")
 					.css({"height":20,"width":20,"float":"right"});
 
@@ -79,16 +79,16 @@ jQuery(function ($) {
 					$(element).addClass("clearfix").append(img);
 				}
 			});*/
-				
+
 		});
 		//ロック処理
 		$("#menu ul li a").on("click", function(){
-			
+
 			if($(this).find("img.lock").length){
 				var myPassword = prompt("パスワードを入力してください","");
-				
+
 				if(myPassword == _password){
-					
+
 					location.href = $(this).data("url");
 				}else if (myPassword == null){
 					//何もしない
@@ -117,7 +117,7 @@ jQuery(function ($) {
 	$._createHeader = function() {
 		//ページタイトルセット
 		pageTitle = $("title").text();
-		
+
 		document.write(
 			'<div id="header" class="clearfix">'+
 				'<div class="segment02 clearfix">'+
@@ -135,7 +135,7 @@ jQuery(function ($) {
 
 		//#header_iconsをヘッダーに移動
 		$("#header_icons").appendTo("#header #icon_area");
-		
+
 		$.setHelpLink();
 	}
 	//ヘルプリンク設置
@@ -267,7 +267,7 @@ jQuery(function ($) {
 				val.icon = "../image/navbar/"+val._name+".png";
 			}
 		});
-		
+
 	}
 	/*--------------------------------*/
 
@@ -307,7 +307,7 @@ jQuery(function ($) {
 	$.rapTime = function(str,lastTime) {
 		var now = $.now();
 		var rap = (now -lastTime) /1000;
-		
+
 		return now;
 	}
 	//クリック時に波紋を表示（動画作成用）
@@ -416,7 +416,7 @@ jQuery(function ($) {
 	/*--------------------------------------*/
 	/*--支払方法セレクタにoptionを追加する-------*/
 	$.fn.addPaytypeOptions = function () {
-		var payType = ["現金","カード"];
+		var payType = ["現金","カード","電子マネー"];
 		for (var i = 0; i < payType.length; i++) {
 			this.append($("<option>").val(i).text(payType[i]));
 		}
@@ -562,7 +562,7 @@ jQuery(function ($) {
 			setting.dataType = sendingData.data_type;
 		}
 
-		
+
 		$.ajax(setting);
 	}
 	/*------------------------------------------*/
@@ -661,11 +661,11 @@ jQuery(function ($) {
 
 		//空白領域に要素をセット（#nav_tabが消えるのを防止）
 		var container = $("#container");
-		
-		
+
+
 		var heightDef = $("body").height() - container.height();
 		if (heightDef > 0) {
-			
+
 			var dummy = $("<div>").attr("id","dummy").css("height",heightDef);
 			$("#main_alea").append(dummy);
 		}
@@ -674,10 +674,10 @@ jQuery(function ($) {
 		var title = $("title").text();
 		//該当リンクを色分け
 		var pagelink = $("#menu a:contains("+ title +")").css("background-color","#f39c12");
-		
+
 		//サブメニューの場合は親メニューをクリックして開放
 		var parentDivId = pagelink.parents("div:first").prop("id");
-		
+
 		$("#menu a[data-target=#"+parentDivId+"]").click();
 		//例外
 		if (title == "月報作成") {

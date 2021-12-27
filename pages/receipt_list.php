@@ -18,7 +18,7 @@ $model = new ReceiptListModel();
 <link href="../css/mmenu.css" rel="stylesheet" type="text/css"/>
 
 <script src="../js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/common.js?ver=20190114"></script>
 <script type="text/javascript" src="../js/receipt_list.js?ver=20170925"></script>
 
 <script type="text/javascript" src="../js/string_check.js"></script>

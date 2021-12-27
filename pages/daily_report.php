@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
  session_start();
 }
-require_once __DIR__.'/../PHPClass/DailyReportModel.php';
+require_once '../PHPClass/DailyReportModel.php';
 $model = new DailyReportModel();
 ?>
 <!DOCTYPE html>
@@ -16,13 +16,13 @@ $model = new DailyReportModel();
 <link href="../css/layout.css" rel="stylesheet" type="text/css"/>
 <link href="../css/mmenu.css" rel="stylesheet" type="text/css"/>
 <script src="../js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../js/common.js"></script>
-<script type="text/javascript" src="../js/daily_report.js"></script>
+<script type="text/javascript" src="../js/common.js?ver=20190114"></script>
+<script type="text/javascript" src="../js/daily_report.js?ver=20190217"></script>
 <script type="text/javascript" src="../js/plan_manager.js"></script>
 
 <!-- plugins -->
 <link href="../plugin/css/jquery.mmenu.all.css" rel="stylesheet" type="text/css"/>
-<link href="../plugin/css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet" 
+<link href="../plugin/css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
       media="all and (min-width: 768px)" />
 <script type="text/javascript" src="../plugin/js/jquery.mmenu.min.all.js"></script>
 <!-- ------- -->
@@ -131,10 +131,14 @@ $._createNavigation();
 					<div class="seg_contents right" title="card_title">カード</div>
 					<div class="seg_contents right" title="card"></div>
 				</div>
+        <div class="segment02 clearfix">
+					<div class="seg_contents right" title="card_title">電子マネー</div>
+					<div class="seg_contents right" title="e_money"></div>
+				</div>
 			</li>
 		</ul>
 	</dd>
-	
+
 	<dt>
 		日別リスト
 	</dt>
@@ -163,6 +167,10 @@ $._createNavigation();
 					<div class="seg_contents right">カード</div>
 					<div class="seg_contents right card"></div>
 				</div>
+        <div class="segment02 clearfix">
+					<div class="seg_contents right">電子マネー</div>
+					<div class="seg_contents right e_money"></div>
+				</div>
 				<div class="segment02 clearfix">
 					<div class="seg_contents right">合計売上</div>
 					<div class="seg_contents right total orange"></div>
@@ -172,45 +180,8 @@ $._createNavigation();
 		</ul>
 	</dd>
 </dl>
-
-
 </div>
 
-<!-- <div class="contents_area report">
-
-<form action="daily_report.php" method="post" id="dr_form">
-<select name="month"></select>
-</form>
-
-<div id="total">
-<dl class="color_type01">
-	<dt class="f_20 slategray">
-	来店人数
-	<span class="right orange" title="num"></span>
-	</dt>
-</dl>
-<dl class="color_type01">
-	
-	<dt class="f_20 slategray">
-	合計売上
-	<span class="right orange" title="all"></span>
-	</dt>
-	
-	<dd class="segment02 clearfix slategray">
-		<div class="seg_contents right" title="tec_title">技術売上</div>
-		<div class="seg_contents right" title="tec"></div>
-		<div class="seg_contents right" title="pro_title">店販売上</div>
-		<div class="seg_contents right" title="pro"></div>
-		<div class="seg_contents right" title="cash_title">現金</div>
-		<div class="seg_contents right" title="cash"></div>
-		<div class="seg_contents right" title="card_title">カード</div>
-		<div class="seg_contents right" title="card"></div>
-	</dd>
-	
-</dl>
-</div>
-
-</div>-->
 </div>
 </div>
 </div>
