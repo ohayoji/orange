@@ -64,6 +64,10 @@ class StaffReportModel extends RootModel{
 	function getStaffReport($staff,$receipts,$addRems,$totalDeductions,$paidRems) {
 		//スタッフ合計売上
 		$totalSales = 0;
+    // 技術売上
+    $tecSales = 0;
+    // 商品売上
+    $proSales = 0;
 		//スタッフ合計歩合
 		$totalInc = 0;
 
@@ -80,6 +84,8 @@ class StaffReportModel extends RootModel{
 
 				//合計売上計算
 				$totalSales = $totalSales + $tec + $pro;
+        $tecSales = $tecSales + $tec;
+        $proSales = $proSales + $pro;
 
 				//歩合計算
 				if ($staff["percentage"]) {//技術歩合率設定済スタッフ
@@ -104,6 +110,8 @@ class StaffReportModel extends RootModel{
 			//大文字に変換
 			$stRep["position"] = strtoupper($staff["position"]);
 			$stRep["total_sale"] = $totalSales;
+      $stRep["tec_sale"] = $tecSales;
+      $stRep["pro_sale"] = $proSales;
 			$stRep["salary"] = $staff["salary"];
 			$stRep["total_inc"] = $totalInc;
 			$stRep["add_rem"] = 0;

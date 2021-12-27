@@ -1,5 +1,5 @@
 <?php
-require_once '../PHPClass/PersonalSettingModel.php';
+require_once __DIR__.'/../PHPClass/PersonalSettingModel.php';
 $model = new PersonalSettingModel();
 ?>
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ $model = new PersonalSettingModel();
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
 <script src="../js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/common.js?ver=20190114"></script>
 <script type="text/javascript" src="../js/personal_setting.js"></script>
 <script type="text/javascript" src="../js/string_check.js"></script>
 

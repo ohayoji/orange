@@ -1,13 +1,13 @@
 jQuery(function ($) {
-	
-	
-	
+
+
+
 	////console.log("_todayRecCompReserves",_todayRecCompReserves);//
-	
-	
+
+
 	/*--月セレクタ----------------*/
 	var monSel = $("select[name=month]");
-	
+
 	//月セレクタ初期設定
 	$.each(_monthDatas,function(index,val){
 		monSel.append($("<option>").val(val.value).text(val.text));
@@ -15,41 +15,49 @@ jQuery(function ($) {
 	monSel.val(_selectedMonth)
 		.on("change",function(e){ $("#dr_form").submit(); });
 	/*------------------------------*/
-	
+
 	/*--月合計表示----------------------*/
+  console.log("_totalReport",_totalReport);
 	var totalTec = parseInt(_totalReport.tec_sale);
 	var totalPro = parseInt(_totalReport.pro_sale);
 	var totalCash = parseInt(_totalReport.cash_tec) + parseInt(_totalReport.cash_pro);
 	var totalCard = parseInt(_totalReport.card_tec) + parseInt(_totalReport.card_pro);
-	
+  var totalEmoney = parseInt(_totalReport.e_money_tec) + parseInt(_totalReport.e_money_pro);
+  console.log("_totalReport.e_money_tec",_totalReport.e_money_tec);
+
 	$("#total [title=num]").text($.delimiting(_totalReport.count)+"人");
-	
+
 	$("#total [title=all]").text($.delimiting(totalTec+totalPro));
-	
+
 	$("#total [title=tec]").text($.delimiting(totalTec));
 	$("#total [title=pro]").text($.delimiting(totalPro));
-	
+
 	$("#total [title=cash]").text($.delimiting(totalCash));
 	$("#total [title=card]").text($.delimiting(totalCard));
+  $("#total [title=e_money]").text($.delimiting(totalEmoney));
 	/*---------------------------------*/
-	
+
 	/*--リスト表示------------------------*/
 	//テンプレ
 	var templi = $("#temp_li");
+  console.log("_dailyReport",_dailyReport);
 	$.each(_dailyReport,function(index,val){
-		
+
 		var tec = 0, pro = 0;
 		if (val["tec_sale"]) { tec = parseInt(val["tec_sale"]);}
 		if (val["pro_sale"]) { pro = parseInt(val["pro_sale"]);}
-		var cash = 0, card = 0;
+		var cash = 0, card = 0, e_money = 0;
 		if (val["cash_tec"]) { cash = cash+parseInt(val["cash_tec"]);}
 		if (val["cash_pro"]) { cash = cash+parseInt(val["cash_pro"]);}
 		if (val["card_tec"]) { card = card+parseInt(val["card_tec"]);}
 		if (val["card_pro"]) { card = card+parseInt(val["card_pro"]);}
-		
+    if (val["e_money_tec"]) { e_money = e_money+parseInt(val["e_money_tec"]);}
+		if (val["e_money_pro"]) { e_money = e_money+parseInt(val["e_money_pro"]);}
+    console.log("card",card, "e_money", e_money);
+
 		//日別リスト
 		var li = templi.clone().show().attr("id","date_"+val["date"]);
-		
+
 		li.find(".date").text(
 				val["date"]+
 				"日（"+$.createDayFromSQLDAYNAME(val["dayname"])+"）");
@@ -58,11 +66,12 @@ jQuery(function ($) {
 		li.find(".pro").text($.delimiting(pro));
 		li.find(".cash").text($.delimiting(cash));
 		li.find(".card").text($.delimiting(card));
+    li.find(".e_money").text($.delimiting(e_money));
 		li.find(".total").text($.delimiting(tec+pro));
-		
+
 		templi.before(li);
 	});
-	
+
 	//今月なら今日に近い日までスクロール
 	if (monSel.val() == _today.substr(0,7)) {
 		var today = parseInt(_today.substr(8));
@@ -86,6 +95,6 @@ jQuery(function ($) {
 									"\nです");
 		},100);
 	}
-	
+
 	/*----------------------------------*/
 });

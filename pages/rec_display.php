@@ -1,5 +1,5 @@
 <?php
-require_once '../PHPClass/RecDisplayModel.php';
+require_once __DIR__.'/../PHPClass/RecDisplayModel.php';
 $model = new RecDisplayModel();
 ?>
 <!DOCTYPE html>
@@ -8,13 +8,13 @@ $model = new RecDisplayModel();
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,user-scalable=no" />
 <script src="../js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../js/common.js"></script>
-<script type="text/javascript" src="../js/rec_display.js"></script>
+<script type="text/javascript" src="../js/common.js?ver=20190114"></script>
+<script type="text/javascript" src="../js/rec_display.js?ver=20190114"></script>
 
 <link href="../css/base.css" rel="stylesheet" type="text/css"/>
 <link href="../css/layout.css" rel="stylesheet" type="text/css"/>
 <link href="../css/items.css" rel="stylesheet" type="text/css"/>
-<link href="../css/register_buttons.css" rel="stylesheet" type="text/css"/>
+<link href="../css/register_buttons.css?ver=20190114" rel="stylesheet" type="text/css"/>
 
 <!--font-awesome----------->
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
@@ -37,7 +37,6 @@ var _pages = JSON.parse('<?php echo json_encode($model->getSalonPages())?>');
 </script>
 
 <style type="text/css">
-<!--
 .rec_disp_contents{
 	padding: 12px;
 }
@@ -48,17 +47,13 @@ var _pages = JSON.parse('<?php echo json_encode($model->getSalonPages())?>');
 @MEDIA screen and (min-width:768px)  {
 	.rec_disp_contents{
 		box-sizing: border-box;
-		width: 500px;
+		width: 600px;
 		margin: auto;
 	}
 
 
 }
-/*a{
-	color: #845b96;
-	text-decoration: underline;
-}*/
--->
+
 </style>
 
 </head>
@@ -68,21 +63,6 @@ var _pages = JSON.parse('<?php echo json_encode($model->getSalonPages())?>');
 <div id="container">
 <div id=main_alea>
 <div class="contents_area">
-
-	<!--<div class="segment02 vp_24 clearfix rec_disp_contents">
-		<div class="seg_contents left">
-			<a id="back" href="javascript:void(0)">
-				<i class="fa fa-chevron-left" aria-hidden="true"></i>
-				修正する
-			</a>
-		</div>
-		<div class="seg_contents right" style="float:right">
-			<a id="close" class="" href="javascript:void(0)">
-				<i class="fa fa-times" aria-hidden="true"></i>
-				閉じる
-			</a>
-		</div>
-	</div>-->
 	<a id="close" class="right_link rec_disp_contents" href="javascript:void(0)">
 		<i class="fa fa-times" aria-hidden="true"></i>
 		閉じる
@@ -96,11 +76,6 @@ var _pages = JSON.parse('<?php echo json_encode($model->getSalonPages())?>');
 
 	<div class="rec_disp_contents" id="menus">
 	</div>
-
-	<!--<div class="rec_disp_contents f_20">
-		<input type="checkbox" id="pay_type">
-		<label for="pay_type"> カード払い</label>
-	</div>-->
 
 	<div class="rec_disp_contents">
 
@@ -134,18 +109,24 @@ var _pages = JSON.parse('<?php echo json_encode($model->getSalonPages())?>');
 
 	</div>
 
-	<div id="register_buttons">
+	<div id="register_buttons" class="rec_disp_contents">
 		<button type="button" class="register_sub" id="rgstr_cash">
 			<span class="icon">
 				<i class="fa fa-money" aria-hidden="true"></i>
 			</span>
-			<span class="text">現金でお会計</span>
+			<span class="text"><span>現金</span>でお会計</span>
 		</button>
 		<button type="button" class="register_sub" id="rgstr_card">
 			<span class="icon">
 				<i class="fa fa-credit-card" aria-hidden="true"></i>
 			</span>
-			<span class="text">カードでお会計</span>
+			<span class="text"><span>カード</span>でお会計</span>
+		</button>
+    <button type="button" class="register_sub" id="rgstr_e_money">
+			<span class="icon">
+				<i class="fa fa-credit-card" aria-hidden="true"></i>
+			</span>
+			<span class="text"><span>電子マネー</span>でお会計</span>
 		</button>
 	</div>
 
@@ -155,6 +136,7 @@ var _pages = JSON.parse('<?php echo json_encode($model->getSalonPages())?>');
 			お支払い方法：
 			<span class="cash hide">現金</span>
 			<span class="card hide">カード</span>
+      <span class="e_money hide">電子マネー</span>
 		</p>
 	</div>
 

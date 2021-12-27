@@ -1,6 +1,6 @@
 <?php
-require_once '../PHPClass/ReserveModel.php';
-require_once '../PHPClass/CompanySettingModel.php';
+require_once __DIR__.'/../PHPClass/ReserveModel.php';
+require_once __DIR__.'/../PHPClass/CompanySettingModel.php';
 $rootModel = new RootModel();
 if($rootModel->_visiter == "company"){
 
@@ -31,7 +31,7 @@ $model = new ReserveModel();
   <link href="../css/mmenu.css" rel="stylesheet" type="text/css"/>
 
   <script src="../js/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="../js/common.js"></script>
+  <script type="text/javascript" src="../js/common.js?ver=20190114"></script>
   <script type="text/javascript" src="../js/stamp.js"></script>
   <script type="text/javascript" src="../js/reserve.js?ver=20180826"></script>
   <script type="text/javascript" src="../js/add_reserve.js?ver=20170925"></script>

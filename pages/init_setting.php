@@ -1,5 +1,5 @@
 <?php
-require_once '../PHPClass/InitSettingModel.php';
+require_once __DIR__.'/../PHPClass/InitSettingModel.php';
 $model = new InitSettingModel();
 ?>
 
@@ -29,7 +29,7 @@ $model = new InitSettingModel();
 <!-- 必要ファイル -->
 <!-- TODO session管理無視のため_sessionCheckCancelに値を入れる（開発用） -->
 <script>_sessionCheckCancel = "test";</script>
-<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/common.js?ver=20190114"></script>
 <script type="text/javascript" src="../js/string_check.js"></script>
 
 <!-- page controller -->

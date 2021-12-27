@@ -14,7 +14,7 @@ jQuery(function ($) {
 	cashCarcBox = $(".cash_carc");
 	thankyouMassage = $(".thankyou_message");
 
-	
+
 	//閉じるボタン
 	$("#close").on("click",function(){
 		if (!finished) {
@@ -25,7 +25,7 @@ jQuery(function ($) {
 	});
 	/*//修正するボタン
 	$("#back").on("click",function(){
-		
+
 		window.location = "receipt.php?mode=register&rec_id=" + _receipt.rec_id + "&back_link=no";
 	});*/
 
@@ -63,12 +63,12 @@ jQuery(function ($) {
 
 
 
-	
+
 
 	$.setCashCarcBox();
 	//会計ボタンクリック処理
 	registerButtons.on("click",function(e){
-		
+
 		button = $(this);
 
 		if (button.attr("id") == "rgstr_cash") {//現金
@@ -77,12 +77,16 @@ jQuery(function ($) {
 				$.updatePayType(0);
 			}
 
-		}else {//カード
+		}else if (button.attr("id") == "rgstr_card") {//カード
 
 			if (confirm("カードでお会計をしてよろしいですか？")) {
 				$.updatePayType(1);
 			}
-		}
+		}else{ //電子マネー
+      if (confirm("電子マネーでお会計をしてよろしいですか？")) {
+        $.updatePayType(2);
+      }
+    }
 	});
 
 });
@@ -95,7 +99,7 @@ jQuery(function ($) {
 		var back = cashCarcBox.find("div.cash_carc_back");
 
 		charge.change(function(){
-			
+
 			var amount = $(this).val() - totalSales;
 			back.text($.delimiting(amount));
 		});
@@ -108,21 +112,21 @@ jQuery(function ($) {
 				id:_receipt.rec_id,
 				pay_type:payType
 		}
-		
+
 		$.sendAjax(data,{
 			success:function(res){
-				
+
 
 				//会計ボタンを隠す
 				registerButtons.hide();
 
 				if (payType == 1) {
-					//alert("カード払いでお会計が完了しました");
 					cashCarcBox.hide();
-
 					thankyouMassage.find("span.card").show();
-				}else {
-					//alert("現金払いでお会計が完了しました");
+				}else if (payType == 2) {
+          cashCarcBox.hide();
+					thankyouMassage.find("span.e_money").show();
+        }else {
 					//お預かり金額をいい感じに表示
 					var chargeBox = cashCarcBox.find(".cash_carc_charge");
 					var input = chargeBox.find("input");
@@ -133,10 +137,6 @@ jQuery(function ($) {
 				}
 				thankyouMassage.show();
 				finished = true;
-				/*
-				//修正ボタンを削除
-				$("#back").remove();
-				*/
 			}
 		});
 	}

@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
  session_start();
 }
-require_once '../PHPClass/turba_func_SalarySheetModel.php';
+require_once __DIR__.'/../PHPClass/turba_func_SalarySheetModel.php';
 $model = new turba_func_SalarySheetModel();
 ?>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ $model = new turba_func_SalarySheetModel();
 <link href="../css/mmenu.css" rel="stylesheet" type="text/css"/>
 
 <script src="../js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/common.js?ver=20190114"></script>
 <script type="text/javascript" src="../js/turba_func_salary_sheet.js"></script>
 
 <!-- plugins -->

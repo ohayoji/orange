@@ -1,11 +1,16 @@
 div#register_buttons{
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #register_buttons button.register_sub{
   width: 250px;
   margin: 12px;
   color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
 }
 
 #register_buttons button#rgstr_cash{
@@ -14,24 +19,27 @@ div#register_buttons{
 #register_buttons button#rgstr_card{
   background-color: #a3c600;
 }
-
-#register_buttons button span{
-
+#register_buttons button#rgstr_e_money{
+  background-color: #404040;
 }
 #register_buttons button span.icon{
-  font-size: 48px;
+  font-size: 36px;
 }
 #register_buttons button span.text{
   font-size: 18px;
+  flex-grow: 2;
+  text-align: center;
 }
 
 @MEDIA screen and (min-width:768px){
-
+  div#register_buttons{
+    flex-direction: row;
+  }
   #register_buttons button.register_sub{
-    width: 220px;
+    width: 300px;
     padding: 12px;
   }
-  #register_buttons button span{
+  #register_buttons button.register_sub span.text span{
     display: block;
   }
 }

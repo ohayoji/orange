@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
  session_start();
 }
-require_once '../PHPClass/LoginModel.php';
+require_once __DIR__.'/../PHPClass/LoginModel.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,7 +47,7 @@ require_once '../PHPClass/LoginModel.php';
 	width: 270px;
 	margin: auto;
 	padding: 48px 24px 100px;
-
+	
 }
 #login_box *:not(input){
 	font-family: mplus;
@@ -94,7 +94,7 @@ require_once '../PHPClass/LoginModel.php';
   				ログイン
   		</button> -->
   		<!-- <div class="fb-login-button" data-max-rows="1" data-size="" data-show-faces="false" data-auto-logout-link="false" data-scope="public_profile,email" onlogin="checkLoginState();"></div> -->
-
+  		
   		<a class="right_link vp_24" href="../password_reissue.php">パスワード再発行</a>
  	</div>
 </div>
@@ -104,7 +104,7 @@ require_once '../PHPClass/LoginModel.php';
 		<script type="text/javascript" lang="JavaScript" src="https://trusted-web-seal.cybertrust.ne.jp/seal/getScript?host_name=orange01.jp&amp;type=45&amp;svc=4&amp;cmid=2012706"></script>
 	</div>
 	<!-- ----------- -->
-
+	
 </div>
 
 </body>

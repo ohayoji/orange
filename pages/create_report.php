@@ -1,5 +1,5 @@
 <?php
-require_once '../PHPClass/CreateReportModel.php';
+require_once __DIR__.'/../PHPClass/CreateReportModel.php';
 $model = new CreateReportModel();
 ?>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@ $model = new CreateReportModel();
 <link rel="apple-touch-icon" href="../image/4cube.png" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
 <script src="../js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/common.js?ver=20190114"></script>
 <script type="text/javascript" src="../js/create_report.js"></script>
 <script type="text/javascript" src="../js/string_check.js"></script>
 

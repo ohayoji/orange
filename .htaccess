@@ -2,8 +2,8 @@ SetEnvIf REDIRECT_HTTPS (.*) HTTPS=$1
 <IfModule mod_rewrite.c>
 RewriteEngine on
 # for http
-RewriteCond %{ENV:HTTPS} !on
-RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# RewriteCond %{ENV:HTTPS} !on
+# RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 #--index.php delete--
 RewriteCond %{THE_REQUEST} ^.*/index.php
 RewriteRule ^(.*)index.php$ https://orange01.jp/$1 [R=301,L]

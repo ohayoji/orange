@@ -2,8 +2,8 @@
 if(!isset($_SESSION)){
  session_start();
 }
-require_once '../PHPClass/StaffReportModel.php';
-require_once '../PHPClass/CompanySettingModel.php';
+require_once __DIR__.'/../PHPClass/StaffReportModel.php';
+require_once __DIR__.'/../PHPClass/CompanySettingModel.php';
 //$test = RootModel::_getWhereStr_salonIDs([1, 2, 3]);
 //POST処理
 if(!empty($_POST["salon"])){
@@ -18,14 +18,14 @@ $model = new StaffReportModel();
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
 <link href="../css/base.css" rel="stylesheet" type="text/css"/>
 <link href="../css/items.css" rel="stylesheet" type="text/css"/>
-<link href="../css/report_table.css" rel="stylesheet" type="text/css"/>
+<link href="../css/report_table.css?ver=20190428" rel="stylesheet" type="text/css"/>
 <link href="../css/mmenu.css" rel="stylesheet" type="text/css"/>
 <link href="../css/layout.css" rel="stylesheet" type="text/css"/>
 
 
 <script src="../js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../js/common.js"></script>
-<script type="text/javascript" src="../js/staff_report.js"></script>
+<script type="text/javascript" src="../js/common.js?ver=20190114"></script>
+<script type="text/javascript" src="../js/staff_report.js?ver=20190428"></script>
 <!-- plugins -->
 <link href="../plugin/css/jquery.mmenu.all.css" rel="stylesheet" type="text/css"/>
 <link href="../plugin/css/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet"
@@ -99,7 +99,15 @@ $._createNavigation();
 <div id="data_table_area">
 <table id="data_table" class="report_table">
 <tr>
-	<th>売上</th>
+	<th>
+    売上
+  </th>
+  <th>
+    <span class="detail">技術</span>
+  </th>
+  <th>
+    <span class="detail">商品</span>
+  </th>
 	<th class="f_14">基本給</th>
 	<th class="f_14">歩合</th>
 	<th class="f_14">手当</th>
